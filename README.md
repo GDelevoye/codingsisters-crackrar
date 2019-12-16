@@ -12,7 +12,7 @@ http://codingsisters.fr/
 Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
 
 
-## Compétences mises en valeur au fur et à mesure avec l'avancée du projet
+## Compétences/connaissances maîisées au fur et à mesure de l'avancée du projet
 
 - Qu'est-ce qu'un **programme** ?
 
