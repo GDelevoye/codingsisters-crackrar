@@ -14,6 +14,7 @@ Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'a
 
 ## Compétences mises en valeur au fur et à mesure avec l'avancée du projet
 
+- Qu'est-ce qu'un **programme** ?
 
 - **Utiliser l'interpréteur** python
 
