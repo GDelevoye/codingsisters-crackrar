@@ -55,7 +55,11 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 
 ### Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
 
-Cette partie est située dans le dossier **"Guide pour participantes"**. Il contient des Jupyter notebook et des PDF correspondants. Elle est accessible dans le dossier "guide_participantes". ILs sont numérotés dans l'ordre à suivre (et qui reprend chronologiquement les compétences mises en valeur).
+Cette partie est située dans le dossier **"Guide pour participantes"**. 
+
+Ce dossier contient des **Jupyter notebook** et des **PDF** correspondant à chaque chapitre. 
+
+Les documents y sont **numérotés dans l'ordre à suivre** (et qui reprend chronologiquement les compétences/connaissances cibles évoquées plus haut).
 
 
 ### Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
