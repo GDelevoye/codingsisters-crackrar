@@ -41,9 +41,9 @@ Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'a
 
 - Le module **itertools**
 
-- **Estimer** le temps que son code va prendre avec le module **time**
-
 - L'affichage à l'écrcan de la **progression d'une boucle avec tqdm**
+
+- **Estimer** le temps que son code va prendre avec le module **time**
 
 
 ## Contenu
