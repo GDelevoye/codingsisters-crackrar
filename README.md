@@ -57,18 +57,21 @@ Cette partie est située dans le dossier **"Guide pour participantes"**. Il cont
 
 ### Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
 
-Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier "guide_encadrantes"
+Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier **"Guide pour encadrantes"**.
+
+Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours des TP
 
 
-### Une troisième partie de **package python** avec:
+### Une troisième partie de **package python** 
 
-- Une fonctions qui permettent d'ouvrir facilement des RAR en python
+Le package "sisters-rarcrack" contient:
 
-- Une fonction qui permette de tester facilement un mot de passe sur un fichier RAR ouvert
+- **Une fonction qui permet d'ouvrir un .RAR** facilement en python
+
+- Une fonction qui permette de **tester un mot de passe** facilement sur un fichier RAR ouvert
 
 
-Elle est accessible dans le dossier "sisters-rarcrack" sous la forme d'un package python importable et installable par pip (voir "Installation")
-
+Ce package est accessible dans le dossier "sisters-rarcrack" sous la forme d'un package python importable et installable par pip (voir "Installation")
 
 
 ## Installation du package sisters-rarcrak
