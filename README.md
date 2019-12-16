@@ -50,7 +50,7 @@ Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'a
 
 Ce projet contient plusieurs parties pour guider le travail des participantes et servir de support aux encadrantes:
 
-* Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
+### Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
 
 - Exécuter des commandes simples dans l'interpréteur
 - Afficher des messages dans l'interpréteur
@@ -67,14 +67,16 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 Cette partie est située dans le dossier **"Guide pour participantes"**. Il contient des Jupyter notebook et des PDF correspondants. Elle est accessible dans le dossier "guide_participantes"
 
 
-* Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
+### Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
 
 Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier "guide_encadrantes"
 
 
-* Une deuxième partie de **package python** avec:
-** Une fonctions qui permettent d'ouvrir facilement des RAR en python
-** Une fonction qui permette de tester facilement un mot de passe sur un fichier RAR ouvert
+### Une troisième partie de **package python** avec:
+
+- Une fonctions qui permettent d'ouvrir facilement des RAR en python
+
+- Une fonction qui permette de tester facilement un mot de passe sur un fichier RAR ouvert
 
 
 Elle est accessible dans le dossier "sisters-rarcrack" sous la forme d'un package python importable et installable par pip (voir "Installation")
