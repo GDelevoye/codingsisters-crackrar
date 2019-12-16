@@ -33,7 +33,9 @@ Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'a
 
 - **Lire un fichier** ligne par ligne en python
 
-- Utiliser un module pour **Ouvrir un fichier RAR** en python
+- **installer** et utiliser un **package** pour utiliser ses **fonctions**
+
+- **Ouvrir un fichier RAR** en python avec un package
 
 - Derrière chaque boucle for: les **générateurs**
 
@@ -86,5 +88,5 @@ pip install sisters-rarcrack
 ## Utilisation du package
 
 
-L'utilisation des fonctions du package est détaillé dans le jupyter notebook pour les participantes intitulées "Etape 0: Installer et utiliser le package"
+L'utilisation des fonctions du package est détaillé dans le jupyter notebook pour les participantes intitulées "Installer et utiliser un package"
 
