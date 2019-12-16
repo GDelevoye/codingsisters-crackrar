@@ -6,39 +6,101 @@ L'initiative "coding sisters" consiste à accueillir des lycéennes parisiennes 
 
 L'ensemble des informations relatives à l'initiative codingsisters sont disponibles à la page suivante:
 
-[link]http://codingsisters.fr/[/link]
+http://codingsisters.fr/
 
-Ce projet Github consiste à cracker un fichier RAR. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
+
+Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
+
+
+## Compétences mises en valeur au fur et à mesure avec l'avancée du projet
+
+
+- **Utiliser l'interpréteur** python
+
+- **Utiliser l'interpréteur dans un notebook**
+
+- **Ouvrir un fichier** en python
+
+- **Assigner** des variables
+
+- Faire des **tests logiques**
+
+- Faire des boucles **while**
+
+- Les boucles **For**
+
+- Les **boucles imbriquées**
+
+- **Lire un fichier** en python
+
+- **Ouvrir un fichier RAR** en python
+
+- Derrière chaque boucle for: les **générateurs**
+
+- Le module **strings**
+
+- Le module **itertools**
+
+- **Estimer** le temps que son code va prendre avec le module **time**
+
+- L'affichage à l'écrcan de la **progression d'une boucle avec tqdm**
+
 
 ## Contenu
 
 Ce projet contient plusieurs parties pour guider le travail des participantes et servir de support aux encadrantes:
 
-* Une partie **d'exemple de corrections** pour les encadrantes, avec plusieurs niveaux de difficulté
+* Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
+
+
 ** Tester un mot de passe
+
+** Tester plusieurs mots de passe à la main tant qu'on n'a pas le bon
+
 ** Cracker un mot de passe dans une liste de l'utilisateur
+
 ** Cracker un mot de passe type code PIN (4 chiffres) en brute-force
+
 ** Cracker un mot de passe qui contient des chiffres et des lettres en brute-force
-** Cracker un mot de passe en essaytn des combinaisons de mots-clés en majuscules ou minuscules
+
+** Cracker un mot de passe en essayant des combinaisons de mots-clés en majuscules ou minuscules
+
 ** Ajouter une fonction qui estime le temps nécessaire pour cracker le mot de passe
 
-* Une partie de **package python** avec des fonctions qui permettent d'ouvrir facilement des RAR en python, afin que les participantes puissent focaliser rapidement sur le cracking lui-même sans avoir à se focaliser sur les fichiers RAR
+
+Cette partie est située dans le dossier **"Guide pour participantes"**. Il contient des Jupyter notebook et des PDF correspondants. Elle est accessible dans le dossier "guide_participantes"
 
 
-## Compétences graduellement mises en valeur avec l'avancée du projet
+* Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
 
-- Aperçu du format RAR
-- Les **tests logiques**
-- Les boucles **For**
-- L'affichage à l'écrcan de la **progression d'une boucle**
-- Les **boucles imbriquées**
-- Les **générateurs**
-- Le module **itertools**
-- **Estmer** le temps que son code va prendre
+
+Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier "guide_encadrantes"
+
+
+* Une deuxième partie de **package python** avec:
+
+** Une fonctions qui permettent d'ouvrir facilement des RAR en python
+
+** Une fonction qui permette de tester facilement un mot de passe sur un fichier RAR ouvert
+
+
+Elle est accessible dans le dossier "sisters-rarcrack" sous la forme d'un package python importable et installable par pip (voir "Installation")
+
+
 
 ## Installation du package sisters-rarcrak
 
+
+```bash
 https://github.com/GDelevoye/sisters-rarcrack.git
+
 pip install sisters-rarcrack
+```
+
+## Utilisation du package
+
+
+L'utilisation des fonctions du package est détaillé dans le jupyter notebook pour les participantes intitulées "Etape 0: Installer et utiliser le package"
+
 
 ## Contact
