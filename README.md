@@ -52,19 +52,7 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 
 ### Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
 
-- Exécuter des commandes simples dans l'interpréteur
-- Afficher des messages dans l'interpréteur
-- Faire un test sur une variable
-- Tester un mot de passe dans le notebook avec l'entrée utilisateur
-- Tester plusieurs mots de passe à la main tant qu'on n'a pas le bon avec l'entrée utilisateur
-- Cracker un mot de passe dans une liste définie
-- Cracker un mot de passe type code PIN (4 chiffres) en brute-force
-- Cracker un mot de passe qui contient des chiffres et des lettres en brute-force
-- Cracker un mot de passe en essayant des combinaisons de mots-clés en majuscules ou minuscules
-- Ajouter une fonction qui estime le temps nécessaire pour cracker le mot de passe
-
-
-Cette partie est située dans le dossier **"Guide pour participantes"**. Il contient des Jupyter notebook et des PDF correspondants. Elle est accessible dans le dossier "guide_participantes"
+Cette partie est située dans le dossier **"Guide pour participantes"**. Il contient des Jupyter notebook et des PDF correspondants. Elle est accessible dans le dossier "guide_participantes". ILs sont numérotés dans l'ordre à suivre (et qui reprend chronologiquement les compétences mises en valeur).
 
 
 ### Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
