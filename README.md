@@ -27,13 +27,13 @@ Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'a
 
 - Faire des boucles **while**
 
-- Les boucles **For**
+- Les **listes** et les boucles **For**
 
 - Les **boucles imbriquées**
 
-- **Lire un fichier** en python
+- **Lire un fichier** ligne par ligne en python
 
-- **Ouvrir un fichier RAR** en python
+- Utiliser un module pour **Ouvrir un fichier RAR** en python
 
 - Derrière chaque boucle for: les **générateurs**
 
@@ -52,16 +52,16 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 
 * Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
 
-** Exécuter des commandes simples dans l'interpréteur
-** Afficher des messages dans l'interpréteur
-** Faire un test sur une variable
-** Tester un mot de passe dans le notebook avec l'entrée utilisateur
-** Tester plusieurs mots de passe à la main tant qu'on n'a pas le bon avec l'entrée utilisateur
-** Cracker un mot de passe dans une liste définie
-** Cracker un mot de passe type code PIN (4 chiffres) en brute-force
-** Cracker un mot de passe qui contient des chiffres et des lettres en brute-force
-** Cracker un mot de passe en essayant des combinaisons de mots-clés en majuscules ou minuscules
-** Ajouter une fonction qui estime le temps nécessaire pour cracker le mot de passe
+- Exécuter des commandes simples dans l'interpréteur
+- Afficher des messages dans l'interpréteur
+- Faire un test sur une variable
+- Tester un mot de passe dans le notebook avec l'entrée utilisateur
+- Tester plusieurs mots de passe à la main tant qu'on n'a pas le bon avec l'entrée utilisateur
+- Cracker un mot de passe dans une liste définie
+- Cracker un mot de passe type code PIN (4 chiffres) en brute-force
+- Cracker un mot de passe qui contient des chiffres et des lettres en brute-force
+- Cracker un mot de passe en essayant des combinaisons de mots-clés en majuscules ou minuscules
+- Ajouter une fonction qui estime le temps nécessaire pour cracker le mot de passe
 
 
 Cette partie est située dans le dossier **"Guide pour participantes"**. Il contient des Jupyter notebook et des PDF correspondants. Elle est accessible dans le dossier "guide_participantes"
