@@ -1,0 +1,1 @@
+recursive-include sisters-rarcrack *.py *.rar *.csv *.ipynb *.odf *.pdf *.txt
