@@ -11,52 +11,6 @@ http://codingsisters.fr/
 
 Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
 
-
-## Compétences/connaissances maîisées au fur et à mesure de l'avancée du projet
-
-
-- (facultatif) Quels modèles féminins pour une hackeuse ?
-
-- Qu’y a-t-il dans un ordinateur ?
-
-- Qu'est-ce qu'un programme ?
-
-- Utiliser la ligne de commande
-
-- Utiliser l'interpréteur python et afficher des messages
-
-- Assigner des variables
-
-- Faire des tests logiques sur les variables
-
-- Récupérer l'entrée au clavier de l'utilisateur
-
-- Utiliser l'interpréteur dans un notebook
-
-
-- Faire des boucles **while**
-
-- Les **listes** et les boucles **For**
-
-- Les **boucles imbriquées**
-
-- **Lire un fichier** ligne par ligne en python
-
-- **installer** et utiliser un **package** pour utiliser ses **fonctions**
-
-- **Ouvrir un fichier RAR** en python avec un package
-
-- Derrière chaque boucle for: les **générateurs**
-
-- Le module **strings**
-
-- Le module **itertools**
-
-- L'affichage à l'écrcan de la **progression d'une boucle avec tqdm**
-
-- **Estimer** le temps que son code va prendre avec le module **time**
-
-
 ## Contenu
 
 Ce projet contient plusieurs parties pour guider le travail des participantes et servir de support aux encadrantes:
@@ -95,7 +49,7 @@ Ce package est accessible dans le dossier "sisters-rarcrack" sous la forme d'un 
 ```bash
 https://github.com/GDelevoye/sisters-rarcrack.git
 
-pip ./install sisters-rarcrack
+pip install ./sisters-rarcrack
 ```
 
 L'import se fait de la façon suivante:
