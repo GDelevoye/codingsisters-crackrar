@@ -11,62 +11,6 @@ http://codingsisters.fr/
 
 Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
 
-## Contenu
-
-Ce projet contient plusieurs parties pour guider le travail des participantes et servir de support aux encadrantes:
-
-### Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
-
-Cette partie est située dans le dossier **"Guide pour participantes"**. 
-
-Ce dossier contient des **Jupyter notebook** et des **PDF** correspondant à chaque chapitre. 
-
-Les documents y sont **numérotés dans l'ordre à suivre** (et qui reprend chronologiquement les compétences/connaissances cibles évoquées plus haut).
-
-
-### Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
-
-Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier **"Guide pour encadrantes"**.
-
-Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours des TP
-
-
-### Une troisième partie de **package python** 
-
-Le package "sisters-rarcrack" contient:
-
-- **Une fonction qui permet d'ouvrir un .RAR** facilement en python
-
-- Une fonction qui permette de **tester un mot de passe** facilement sur un fichier RAR ouvert
-
-
-Ce package est accessible dans le dossier "sisters-rarcrack" sous la forme d'un package python importable et installable par pip (voir "Installation")
-
-
-## Installation du package sisters-rarcrak
-
-
-```bash
-https://github.com/GDelevoye/sisters-rarcrack.git
-
-pip install ./sisters-rarcrack
-```
-
-L'import se fait de la façon suivante:
-
-```python
-import sistersrarcrack as sr
-```
-
-Le package contient essentiellement une fonction
-
-```python
-st.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
-```
-
-Les autres fonctions sont des corrections pour réaliser le brute force de chiffres, le brute force de lettres, le brute force combiné, l'attaque par dictionnaire ou l'attaque par combinaison de mots
-
-
 ## Liste des compétences/connaissances maîtrisées au fur et à mesure de l'avancée du projet
 
 - (facultatif) Quels modèles féminins pour une hackeuse ?
@@ -130,6 +74,61 @@ Les autres fonctions sont des corrections pour réaliser le brute force de chiff
 
 
 - Estimer le temps que son code va prendre avec le module **time**
+
+## Contenu
+
+Ce projet contient plusieurs parties pour guider le travail des participantes et servir de support aux encadrantes:
+
+### Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
+
+Cette partie est située dans le dossier **"Guide pour participantes"**. 
+
+Ce dossier contient des **Jupyter notebook** et des **PDF** correspondant à chaque chapitre. 
+
+Les documents y sont **numérotés dans l'ordre à suivre** (et qui reprend chronologiquement les compétences/connaissances cibles évoquées plus haut).
+
+
+### Une deuxième partie **de correction pour les encadrantes**, avec les corrections détaillées du projet
+
+Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier **"Guide pour encadrantes"**.
+
+Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours des TP
+
+
+### Une troisième partie de **package python** 
+
+Le package "sisters-rarcrack" contient:
+
+- **Une fonction qui permet d'ouvrir un .RAR** facilement en python
+
+- Une fonction qui permette de **tester un mot de passe** facilement sur un fichier RAR ouvert
+
+
+Ce package est accessible dans le dossier "sisters-rarcrack" sous la forme d'un package python importable et installable par pip (voir "Installation")
+
+
+## Installation du package sisters-rarcrak
+
+
+```bash
+https://github.com/GDelevoye/sisters-rarcrack.git
+
+pip install ./sisters-rarcrack
+```
+
+L'import se fait de la façon suivante:
+
+```python
+import sistersrarcrack as sr
+```
+
+Le package contient essentiellement une fonction
+
+```python
+st.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
+```
+
+Les autres fonctions sont des corrections pour réaliser le brute force de chiffres, le brute force de lettres, le brute force combiné, l'attaque par dictionnaire ou l'attaque par combinaison de mots
 
 
 
