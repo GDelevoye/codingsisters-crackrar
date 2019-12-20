@@ -107,14 +107,79 @@ import sistersrarcrack as sr
 Le package contient essentiellement une fonction
 
 ```python
-sr.test_ouvrir_fichier st.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
+st.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
 ```
 
 Les autres fonctions sont des corrections pour réaliser le brute force de chiffres, le brute force de lettres, le brute force combiné, l'attaque par dictionnaire ou l'attaque par combinaison de mots
 
 
-## Utilisation du package
+## Liste des compétences/connaissances maîtrisées au fur et à mesure de l'avancée du projet
+
+- (facultatif) Quels modèles féminins pour une hackeuse ?
 
 
-L'utilisation des fonctions du package est détaillé dans le jupyter notebook pour les participantes intitulées "Installer et utiliser un package"
+- Qu’y a-t-il dans un **ordinateur** ?
 
+
+- Qu'est-ce qu'un **programme** ?
+
+
+- Utiliser la **ligne de commande**
+
+
+- Utiliser **l'interpréteur python** et afficher des messages
+
+
+- Assigner des **variables**
+
+
+- Faire des **tests logiques** sur les variables
+
+
+- Récupérer **l'entrée au clavier** de l'utilisateur
+
+
+- (facultatif) Utiliser l'interpréteur dans un **notebook**
+
+
+- (facultatif) **Enregistrer** son code et **exécuter** le code de quelqu'un d'autre
+
+
+- Faire des boucles **while**
+
+
+- Les listes et les boucles **For**
+
+
+- Les boucles **imbriquées**
+
+
+- **Lire un fichier** ligne par ligne en python
+
+
+- **installer** et utiliser un **package** pour utiliser ses fonctions
+
+
+- **Ouvrir un fichier RAR** en python avec un package
+
+
+- Derrière chaque boucle for: **les générateurs**
+
+
+- Le module **strings**
+
+
+- Le module **itertools**
+
+
+- L'affichage à l'écrcan de la progression d'une boucle avec **tqdm**
+
+
+- Estimer le temps que son code va prendre avec le module **time**
+
+
+
+## Credits 
+
+DELEVOYE Guillaume
+ROSE France
