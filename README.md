@@ -55,7 +55,7 @@ Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'a
 - **Lire un fichier** ligne par ligne en python
 
 
-- **installer** et utiliser un **package** pour utiliser ses fonctions
+- **installer** et utiliser un **package** pour utiliser ses **fonctions**
 
 
 - **Ouvrir un fichier RAR** en python avec un package
