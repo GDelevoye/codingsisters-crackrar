@@ -14,17 +14,25 @@ Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'a
 
 ## Compétences/connaissances maîisées au fur et à mesure de l'avancée du projet
 
-- Qu'est-ce qu'un **programme** ?
 
-- **Utiliser l'interpréteur** python
+- (facultatif) Quels modèles féminins pour une hackeuse ?
 
-- **Utiliser l'interpréteur dans un notebook**
+- Qu’y a-t-il dans un ordinateur ?
 
-- **Assigner** des variables
+- Qu'est-ce qu'un programme ?
 
-- Faire des **tests logiques** sur les variables
+- Utiliser la ligne de commande
 
-- **Récupérer l'entrée au clavier** de l'utilisateur
+- Utiliser l'interpréteur python et afficher des messages
+
+- Assigner des variables
+
+- Faire des tests logiques sur les variables
+
+- Récupérer l'entrée au clavier de l'utilisateur
+
+- Utiliser l'interpréteur dans un notebook
+
 
 - Faire des boucles **while**
 
@@ -87,8 +95,23 @@ Ce package est accessible dans le dossier "sisters-rarcrack" sous la forme d'un 
 ```bash
 https://github.com/GDelevoye/sisters-rarcrack.git
 
-pip install sisters-rarcrack
+pip ./install sisters-rarcrack
 ```
+
+L'import se fait de la façon suivante:
+
+```python
+import sistersrarcrack as sr
+```
+
+Le package contient essentiellement une fonction
+
+```python
+sr.test_ouvrir_fichier st.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
+```
+
+Les autres fonctions sont des corrections pour réaliser le brute force de chiffres, le brute force de lettres, le brute force combiné, l'attaque par dictionnaire ou l'attaque par combinaison de mots
+
 
 ## Utilisation du package
 
