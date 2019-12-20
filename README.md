@@ -125,7 +125,7 @@ import sistersrarcrack as sr
 Le package contient essentiellement une fonction
 
 ```python
-st.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
+sr.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
 ```
 
 Les autres fonctions sont des corrections pour réaliser le brute force de chiffres, le brute force de lettres, le brute force combiné, l'attaque par dictionnaire ou l'attaque par combinaison de mots
