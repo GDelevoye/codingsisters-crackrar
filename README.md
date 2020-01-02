@@ -94,29 +94,56 @@ pip install sisters-rarcrack
 
 ### Command-line interface (CLI)
 
+```console
+delevoye@gmcpc04://$ rarcrack -h
+
 usage: rarcrack [-h] [--combination_length COMBINATION_LENGTH]
-                [--charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]]
+
+                [--charsets {lowercase,uppercase,digits,special_characters}
+                
+                [{lowercase,uppercase,digits,special_characters} ...]]
+                
                 [--verbosity {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}]
+                
                 rarFile
+                
+
 
 positional arguments:
+
   rarFile               Path to the .rar file
+  
+
 
 optional arguments:
-  -h, --help            show this help message and exit
-  --combination_length COMBINATION_LENGTH, -l COMBINATION_LENGTH
-                        How many times must the attackDicts be combined
-                        (DEFAULT: 4)
-  --charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...], -c {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]
-                        List of all types of characters among: lowercase,
-                        uppercase, digits, special_characters. DEFAULT:
-                        contains them all
-  --verbosity {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}, -v {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}
-                        Verbosity among: DEBUG, INFO, WARNING, ERROR,
-                        CRITICAL, STDOUT_PSW". If set to STDOUT_PASW,
-                        passwords tried are printed on stdout [highly
-                        deprectaded : Performances issues). DEFAULT: INFO
 
+  -h, --help            show this help message and exit
+  
+  --combination_length COMBINATION_LENGTH, -l COMBINATION_LENGTH
+  
+                        How many times must the attackDicts be combined
+                        
+                        (DEFAULT: 4)
+                        
+  --charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...], -c {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]
+  
+                        List of all types of characters among: lowercase,
+                        
+                        uppercase, digits, special_characters. DEFAULT:
+                        
+                        contains them all
+                        
+  --verbosity {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}, -v {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}
+  
+                        Verbosity among: DEBUG, INFO, WARNING, ERROR,
+                        
+                        CRITICAL, STDOUT_PSW". If set to STDOUT_PASW,
+                        
+                        passwords tried are printed on stdout [highly
+                        
+                        deprectaded : Performances issues). DEFAULT: INFO
+                        
+```
 
 L'utilisation des fonctions du package est détaillé dans le jupyter notebook pour les participantes intitulées "Installer et utiliser un package"
 
