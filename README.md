@@ -11,69 +11,43 @@ http://codingsisters.fr/
 
 Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
 
-## Liste des compétences/connaissances maîtrisées au fur et à mesure de l'avancée du projet
 
-- (facultatif) Quels modèles féminins pour une hackeuse ?
-
-
-- Qu’y a-t-il dans un **ordinateur** ?
-
+## Compétences/connaissances maîisées au fur et à mesure de l'avancée du projet
 
 - Qu'est-ce qu'un **programme** ?
 
+- **Utiliser l'interpréteur** python
 
-- Utiliser la **ligne de commande**
+- **Utiliser l'interpréteur dans un notebook**
 
-
-- Utiliser **l'interpréteur python** et afficher des messages
-
-
-- Assigner des **variables**
-
+- **Assigner** des variables
 
 - Faire des **tests logiques** sur les variables
 
-
-- Récupérer **l'entrée au clavier** de l'utilisateur
-
-
-- (facultatif) Utiliser l'interpréteur dans un **notebook**
-
-
-- (facultatif) **Enregistrer** son code et **exécuter** le code de quelqu'un d'autre
-
+- **Récupérer l'entrée au clavier** de l'utilisateur
 
 - Faire des boucles **while**
 
+- Les **listes** et les boucles **For**
 
-- Les listes et les boucles **For**
-
-
-- Les boucles **imbriquées**
-
+- Les **boucles imbriquées**
 
 - **Lire un fichier** ligne par ligne en python
 
-
 - **installer** et utiliser un **package** pour utiliser ses **fonctions**
-
 
 - **Ouvrir un fichier RAR** en python avec un package
 
-
-- Derrière chaque boucle for: **les générateurs**
-
+- Derrière chaque boucle for: les **générateurs**
 
 - Le module **strings**
 
-
 - Le module **itertools**
 
+- L'affichage à l'écrcan de la **progression d'une boucle avec tqdm**
 
-- L'affichage à l'écrcan de la progression d'une boucle avec **tqdm**
+- **Estimer** le temps que son code va prendre avec le module **time**
 
-
-- Estimer le temps que son code va prendre avec le module **time**
 
 ## Contenu
 
@@ -113,26 +87,11 @@ Ce package est accessible dans le dossier "sisters-rarcrack" sous la forme d'un 
 ```bash
 https://github.com/GDelevoye/sisters-rarcrack.git
 
-pip install ./sisters-rarcrack
+pip install sisters-rarcrack
 ```
 
-L'import se fait de la façon suivante:
-
-```python
-import sistersrarcrack as sr
-```
-
-Le package contient essentiellement une fonction
-
-```python
-sr.essayer_mdp(chemin_vers_fichier_rar, mot_de_passe, nom_sous_fichier=None)
-```
-
-Les autres fonctions sont des corrections pour réaliser le brute force de chiffres, le brute force de lettres, le brute force combiné, l'attaque par dictionnaire ou l'attaque par combinaison de mots
+## Utilisation du package
 
 
+L'utilisation des fonctions du package est détaillé dans le jupyter notebook pour les participantes intitulées "Installer et utiliser un package"
 
-## Credits 
-
-DELEVOYE Guillaume
-ROSE France

@@ -8,7 +8,7 @@ except ImportError:  # for pip <= 9.0.3
 
 setup(
 
-    name='smrtrue',
+    name='sistersrarcrack',
     install_requires=["rarfile",
 "tqdm",
 "more-itertools"
@@ -24,6 +24,7 @@ setup(
     url='https://github.com/GDelevoye/sisters-rarcrack',
 
     include_package_data=True,
+    entry_points={'console_scripts': ['rarcrack=sistersrarcrack.launchers.rarcrack:rarcrack']},
 
     # La liste des marqueurs autorisés
     # https://pypi.python.org/pypi?%3Aaction=list_classifiers.
