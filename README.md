@@ -47,10 +47,13 @@ Réponse: **Oui !** En dernière partie, nous vous donnerons quelques notions de
 - Savoir faire/utiliser une **fonction**
 
 
+
 Et... C'est tout !
 
 
+
 ***Les "briques" que nous allons créer sont pensées pour pouvoir être réalisées indépendamment les unes des autres selon votre niveau***
+
 
 
 ## Nous apprendrons au fur et à mesure à:
