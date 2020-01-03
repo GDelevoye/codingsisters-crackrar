@@ -406,7 +406,7 @@ Nous avons vu que les stratégies sont crées à partir des objets attackDict
 Maintenant, comprenez que **les attackDict et les stratégies SONT des itérables.**
 
 >
-> C'est à dire qu'à partir d'une stratégie, vous pouvez la combiner avec une a utre. Vous pouvez créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). Vous pouvez combiner ensemble le résultat d'une stratégie A avec un nouveau dictionnaire. VOus pouvez par exemple, combiner les recherches de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"***
+> C'est à dire qu'à partir d'une stratégie, vous pouvez la combiner avec une a utre. Vous pouvez créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). Vous pouvez combiner ensemble le résultat d'une stratégie A avec un nouveau dictionnaire. Vous pouvez par exemple, combiner les recherches de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"***
 
 C'est-à-dire que suite au code suivant:
 
@@ -422,4 +422,4 @@ my_strategy = cr.Strategy()
 ... Vous pouvez ré-utiliser l'objet my_strategy pour la mixer avec d'autres stratégies
 
 
-Générer ce type de combinaisons peut être computationnellement intensif. Néanmoins comme nous l'avons dit, cela reste tout à fait marginal par rapport au temps nécessaire pour tester les clés.
+Générer ce type de combinaisons peut être computationnellement intensif. Néanmoins comme nous l'avons dit, cela reste tout à fait marginal par rapport au temps nécessaire pour tester les clés dans le cas d'un fichier .RAR
