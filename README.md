@@ -2,7 +2,7 @@
 
 # A propos des coding sisters
 
-L'initiative "coding sisters" consiste à accueillir des lycéennes parisiennes pour les initier au code
+L'initiative "coding sisters" consiste à accueillir des lycéennes de région parisienne pour les initier au code
 
 L'ensemble des informations relatives à l'initiative codingsisters sont disponibles à la page suivante:
 
@@ -104,7 +104,7 @@ Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivemen
 
 Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de commencer à n'importe laquelle.
 
-#### [ Niveau 1 - Ligne de commande, boucles, lecture de fichier ]
+#### [ Niveau 1 - Ligne de commande, boucles, lecture de fichier ]
 
 - Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **- NIVEAU1**
 
