@@ -104,6 +104,8 @@ Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivemen
 
 Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de commencer à n'importe laquelle.
 
+[ Niveau 1 - Ligne de commande, boucles, lecture de fichier ]
+
 - Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **- NIVEAU1**
 
 - **Tester un mot de passe** .rar en python **- NIVEAU 1**
@@ -113,6 +115,8 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 - Tester tous les mots de passe stockés dans un fichier **- NIVEAU 1**
 
 - Faire une **attaque par dictionnaire** **NIVEAU 1**
+
+[ Niveau 2 - Créer des itérateurs particuliers ]
 
 - Comprendre, utiliser et créer des **itérateurs** : **- NIVEAU 2**
 
@@ -126,15 +130,21 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - Muter les majuscules/minuscules d'une séquence **- NIVEAU 2**
 
+[ Niveau 3 - Programmation orientée objet ]
+
 - Utiliser les **objets** du package crackrar pour créer des **mutations()** **- NIVEAU 3***
 
 - **Combiner** les séquences avec l'objet **strategy()** **- Niveau 3**
+
+[ Niveau 4 - Développement ]
 
 - ***Le challenge du kikoO***: cracker un MoTd£p@sS€ **- Niveau 4** ++
 
 - ***Une vraie développeuse:*** Modifier crackrar pour attaquer des fichiers .zip **- Niveau 4** ++
 
-- REMARQUE : Sécurité des mots de passe, entre fantasmes et réalités **#Niveau 0**
+[ FIN - Remarques et conclusion ]
+
+- Sécurité des mots de passe, entre fantasmes et réalités 
 
 - Disgression finale: Par où continuer si l'on veut devenir hackeuse ?
 
