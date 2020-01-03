@@ -104,37 +104,37 @@ Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivemen
 
 Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de commencer à n'importe laquelle.
 
-- Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **NIVEAU1**
+- Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **- NIVEAU1**
 
-- Tester un mot de passe .rar en python **NIVEAU 1**
+- **Tester un mot de passe** .rar en python **- NIVEAU 1**
 
-- Tester tous les nombres possibles **NIVEAU 1**
+- Tester tous les **nombres** possibles **- NIVEAU 1**
 
-- Tester tous les mots de passe stockés dans un fichier **NIVEAU 1**
+- Tester tous les mots de passe stockés dans un fichier **- NIVEAU 1**
 
-- Faire une attaque par dictionnaire **NIVEAU 1**
+- Faire une **attaque par dictionnaire** **NIVEAU 1**
 
-- Comprendre, utiliser et créer des **itérateurs** : **NIVEAU 2**
+- Comprendre, utiliser et créer des **itérateurs** : **- NIVEAU 2**
 
-- Tester toutes les combinaisons de lettres possibles avec **string** et **itertools* : **NIVEAU 2**
+- Tester toutes les combinaisons de lettres possibles avec **string** et **itertools* : **- NIVEAU 2**
 
-- Tester tous les codes PIN à 4 chiffres possibles **NIVEAU 2**
+- Tester tous les **codes PIN à 4 chiffres** possibles **- NIVEAU 2**
 
-- Tester toutes les dates de naissance possibles **NIVEAU 2**
+- Tester toutes les **dates de naissance** possibles **- NIVEAU 2**
 
-- Tester tous les digicodes possibles **NIVEAU 2**
+- Tester tous les **digicodes possibles** **- NIVEAU 2**
 
-- Muter les majuscules/minuscules d'une séquence **NIVEAU 2**
+- Muter les majuscules/minuscules d'une séquence **- NIVEAU 2**
 
-- Utiliser les **objets** du package crackrar pour créer des **mutations()** **NIVEAU 3***
+- Utiliser les **objets** du package crackrar pour créer des **mutations()** **- NIVEAU 3***
 
-- Combiner les attaques avec l'objet **strategy()** **Niveau 3**
+- **Combiner** les séquences avec l'objet **strategy()** **- Niveau 3**
 
-- Le challenge du kikoO: cracker un MoTd£p@sS€ **Niveau 4**
+- ***Le challenge du kikoO***: cracker un MoTd£p@sS€ **- Niveau 4** ++
 
-- Modifier crackrar pour attaquer des fichiers .zip **Niveau 4**
+- ***Une vraie développeuse:*** Modifier crackrar pour attaquer des fichiers .zip **- Niveau 4** ++
 
-- REMARQUE : Sécurité des mots de passe, entre fantasmes et réalités **Niveau 0**
+- REMARQUE : Sécurité des mots de passe, entre fantasmes et réalités **#Niveau 0**
 
 - Disgression finale: Par où continuer si l'on veut devenir hackeuse ?
 
