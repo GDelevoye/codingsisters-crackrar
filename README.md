@@ -9,7 +9,7 @@ L'ensemble des informations relatives à l'initiative codingsisters sont disponi
 http://codingsisters.fr/
 
 
-Ce Github consiste à expliquer comment **hacker un mot de passe** en **python**. Notamment, le mot de passe d'un **fichier .rar**. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
+Ce Github consiste à expliquer comment **hacker un mot de passe** en **python**. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
 
 # A propos du projet
 
@@ -92,11 +92,7 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 Cette partie est située dans le dossier **"Guide pour participantes"**. 
 
 
-Ce dossier contient des **Jupyter notebook** et des **PDF** correspondant à chaque chapitre. 
-
-Les documents y sont **numérotés dans l'ordre *indicatif* à suivre / ordre de difficulté**
-
-Nous donnons **quelques clés** aux participantes pour réaliser petit à petit des briques de notre futur programme
+Ce dossier contient des **Jupyter notebook** et des **PDF** pour donner des pistes de résolution pour chacun des sous-problèmes. Les documents y sont **numérotés dans l'ordre *indicatif* à suivre / ordre de difficulté**. 
 
 >
 > Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**. Il n'y **aucun ordre à a respecter**: Il y en a pour tous les niveaux !
