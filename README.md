@@ -103,6 +103,12 @@ Ce dossier contient des **Jupyter notebook** et des **PDF** pour donner des pist
 
 Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de commencer à n'importe laquelle.
 
+#### [ INTRODUCTION - Avant-propos ] (facultatif - TOUT PUBLIC)
+
+
+- **La place des femmes** dans le milieu du hacking **- TOUT PUBLIC**
+
+
 #### [ Niveau 1 - Ligne de commande, boucles, lecture de fichier ]
 
 - Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **- NIVEAU1**
@@ -123,6 +129,8 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - Tester tous les **codes PIN à 4 chiffres** possibles **- NIVEAU 2**
 
+- **Chronométrer son code** pour estimer le temps d'une attaque **- NIVEAU 2**
+
 - Tester toutes les **dates de naissance** possibles **- NIVEAU 2**
 
 - Tester tous les **digicodes possibles** **- NIVEAU 2**
@@ -141,9 +149,9 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - ***Une vraie développeuse:*** Modifier crackrar pour attaquer des fichiers .zip **- Niveau 4** ++
 
-#### [ FIN - Remarques et conclusion ]
+#### [ FIN - Remarques et conclusion ] (facultatif - TOUT PUBLIC)
 
-- Sécurité des mots de passe, entre fantasmes et réalités 
+- Sécurité des mots de passe, entre fantasmes et réalités
 
 - Disgression finale: Par où continuer si l'on veut devenir hackeuse ?
 
@@ -238,8 +246,12 @@ aah
 ## Remarque sur la performance
 
 
-Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous utilisons du python, mais au fait que **l'ouverture d'un fichier .rar et la vérification de la clé sont lents**. 
+Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous utilisons du python, mais au fait que **l'ouverture d'un fichier .rar et la vérification de la clé sont lents**. En revanche, la taille du mot de passe n'a quasiment aucune incidence sur la vitesse de crackage. On testera autant de mots de passe par seconde peu importe qu'on ait des clés de 20 caractères ou de 4 caractères.
 
+>
+>Le temps de calcul en python est **négligeable** par rapport au temps d'ouverture du fichier .rar / la vérification de la clé. C'est-à-dire qu'on ira aussi vite à tester un brute-force total de 4 caractères qu'à tester un brute force de 4 mots parmi un dictionnaire d'une centaine de mots. SI l'on a de la chance on peut alors cracker très rapidement des mots de passe de 15, 20 caractères qui seraient ***impossibles*** à cracker en brute force.
+
+La relative lenteur de python par rapport à d'autres langages réputés plus rapides (comme le langage C par exemple) n'est donc absolument pas handicapante ici.
 
 ## Principes python du package crackrar
 
@@ -247,9 +259,7 @@ Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous util
 ### Vue d'ensemble
 
 
-Le package est fait de telle sorte qu'on peut soit faire du brute force total (option 1), soit faire des attaques par dictionnaire (option 2), soit combiner différents types d'approches.
-
-Pour combiner les attaques, nous utiliserons trois concepts: 
+Le package est fait de telle sorte qu'on peut soit faire du brute force total (option 1), soit faire des attaques par dictionnaire (option 2), soit combiner différents types d'approches. Pour pouvoir faire du **brute force** ou **enrichir** les **attaques par dictionnaires**, nous utiliserons trois concepts: 
 
 - Le **dictionnaire d'attaque**
 
@@ -324,16 +334,21 @@ Par exemple, si on attaque avec un dictionnaire qui contient le mot "test", on p
 
 Ceci est d'ailleurs l'objet d'une brique à construire.
 
+
+[ Quel est l'intérêt ? ]
+
 >
 > **Intérêt**: *L'intérêt de créer ces modifications est que si le propriétaire du mot de passe a légèrement modifé un mot du dictionnaire mais en utilisant des tactiques courantes (exemple: Faire démarrer par une majuscule, utiliser alternativement des majuscules ou minuscules...) alors on pourra quand même trouver son mot de passe, sans ajouter beaucoup de temps de calcul, et de manière très modulaire.*
 
+
 ### L'objet "Stratégie" (strategy)
 
-L'objet stratégie va nous permettre de choisir des "stratégies" globales d'attaque pour restreindre l'attaque
 
-Par exemple: 8 caractères avec au moins un chiffre, une majuscule et un caractère spécial
+L'objet stratégie va nous permettre de choisir comment nous allons planifier et exécuter l'attaque
 
-Pour résumer avec un exemple, on utilise la stratégie de la façon suivante
+Paradoxalement, si un utilisateur prudent respecte ces règles de sécurité, la plupart du temps il va respecter ***pile*** ces règles. C'est ainsi qu'il restreindra sans le savoir les possibilités: chercher un mot de passe qui respecte toutes les contraintes (8 caractères dont un spécial, une majuscule, une minuscule et un chiffre) est **bien plus facile** que "un mot de passe d'au moins 9 caractères sans restriction"
+
+Pour résumer avec un exemple, on utilise la stratégie de la façon suivante (les commentaires aident à comprendre le code et comment il s'utilise)
 
 ```python
 # On possède nos fonctions qui permettent de générer des lettres de l'alphabet minuscule
@@ -353,15 +368,17 @@ def from_small_to_large_letter(letter):
 # On importe alors le package
 import crackrar as cr
 
-# On va crée un dictionnaire d'attaque ("attackDict"): les lettres de l'alphabet
-# On crée l'objet attackDict à partir de l'itérateur
+# On va crée un dictionnaire d'attaque ("attackDict"): il générera les lettres de l'alphabet
+# On crée l'objet attackDict à partir de l'itérateur de la façon suivante:
 my_attack_dict = cr.attackDict(my_generator_letters)
 
 # On va rajouter à notre itérateur la possibilité de faire les majuscules
-my_attack_dict.add_mutation(from_small_to_large_letter)
+my_attack_dict.add_mutation(from_small_to_large_letter) 
+# Désormais, notre dictionnaire d'attaque générera des majuscules ET des minuscules !
 
-# Et à partir de ce dictionnaire "muté" on crée une stratégie où on va tester toutes les possibilités de combinaisons
-# Ici, on testera les possibilités de taille 5 (5 lettres majuscules ou minuscules)
+# Et à partir de ce dictionnaire d'attaque "muté" on crée une stratégie 
+# Avec cet objet "strategy" on va pouvoir tester toutes les possibilités de combinaisons
+# Dans cet exemple, on testera les possibilités de taille 5 (5 lettres majuscules ou minuscules)
 
 my_strategy = cr.Strategy()
 my_strategy.add_attack_dict(my_attack_dict,fold=5) 
@@ -375,3 +392,34 @@ my_strategy.launch_attack(rarfile,SHOW_STDOUT=True)
 
 >
 > L'option "SHOW_STDOUT" de la méthode "launch_attack" permet d'afficher (ou non) les combinaisons essayées sur la sortie standard (l'écran)
+
+
+## Combiner les stratégies
+
+
+Nous avons vu que les objets attackDict (mutés ou non) sont crées à partir d'itérables.
+
+
+Nous avons vu que les stratégies sont crées à partir des objets attackDict
+
+
+Maintenant, comprenez que **les attackDict et les stratégies SONT des itérables.**
+
+>
+> C'est à dire qu'à partir d'une stratégie, vous pouvez la combiner avec une a utre. Vous pouvez créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). Vous pouvez combiner ensemble le résultat d'une stratégie A avec un nouveau dictionnaire. VOus pouvez par exemple, combiner les recherches de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"***
+
+C'est-à-dire que suite au code suivant:
+
+```python
+import crackrar as cr
+
+my_attack_dict = cr.attackDict(my_generator_letters)
+my_attack_dict.add_mutation(from_small_to_large_letter) 
+
+my_strategy = cr.Strategy()
+```
+
+... Vous pouvez ré-utiliser l'objet my_strategy pour la mixer avec d'autres stratégies
+
+
+Générer ce type de combinaisons peut être computationnellement intensif. Néanmoins comme nous l'avons dit, cela reste tout à fait marginal par rapport au temps nécessaire pour tester les clés.
