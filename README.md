@@ -363,9 +363,9 @@ my_attack_dict.add_mutation(from_small_to_large_letter)
 my_strategy = cr.Strategy()
 my_strategy.add_attack_dict(my_attack_dict,fold=5) 
 # "fold" précise le nombre de fois qu'on ajoute l'attackDict
-# "4" signifie donc ici qu'on utilisera 5 fois cet attackDict
+# "5" signifie donc ici qu'on utilisera 5 fois cet attackDict
 
-# Puis ensuite on attaque un fichier RAR
+# Puis ensuite on attaque un fichier RAR: Le brute force commence !
 my_strategy.launch_attack(rarfile,SHOW_STDOUT=True)
 
 ```
