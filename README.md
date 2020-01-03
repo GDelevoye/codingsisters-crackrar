@@ -136,7 +136,7 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - **Combiner** les séquences avec l'objet **strategy()**, **- Niveau 3**
 
-#### [ Niveau 4 - Développement ]
+#### [ Niveau 4 - Challenges pour cheffe 4 étoiles ]
 
 - ***Le challenge du kikoO***: cracker un MoTd£p@sS€ **- Niveau 4** ++
 
