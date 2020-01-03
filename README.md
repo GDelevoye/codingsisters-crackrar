@@ -220,7 +220,7 @@ Cracker un mot de passe composé de [par défaut] 4 chiffres
 user@computer:$ rarcrack notes.rar --charset digits
 2020-01-03 10:11:52,730 [INFO] Using charset --> digits
 2020-01-03 10:11:52,730 [INFO] Attack started at 1578042712.7302287
-2020-01-03 10:12:52,293 [INFO] found password 1789 for file /export/home1/users/gmc/delevoye/Github/sisters-rarcrack/sistersrarcrack/test_package/testdata/notes.rar
+2020-01-03 10:12:52,293 [INFO] found password 1789 for file notes.rar
 2020-01-03 10:12:52,293 [INFO] Duration : 59 s
 ```
 
