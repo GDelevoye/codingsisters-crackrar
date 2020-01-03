@@ -22,11 +22,13 @@ Néanmoins, les concepts sont (en partie) transférables pour d'autres types de 
 
 Nous allons utiliser un programme fait maison, et y rajouter au fur et à mesure des fonctionnalités pour en faire un vrai logiciel permettant de cracker les mots de passe.
 
-```console
-Est-ce qu'on peut vraiment commencer à hacker à partir de si peu ?
-```
+>
+> Est-ce qu'on peut vraiment commencer à hacker à partir de si peu ?
 
-Réponse: **Oui !** En dernière partie, nous vous donnerons quelques notions de cryptographie pour que vous compreniez les limites de ce que vous apprendrez ici. Néanmoins, il s'agit d'un vrai exemple de hacking.
+Réponse:
+
+>
+> **Oui !** En dernière partie, nous vous donnerons quelques notions de cryptographie pour que vous compreniez les limites de ce que vous apprendrez ici. Néanmoins, il s'agit d'un vrai exemple de hacking.
 
 
 # Prérequis
@@ -96,7 +98,8 @@ Les documents y sont **numérotés dans l'ordre *indicatif* à suivre / ordre de
 
 Nous donnons **quelques clés** aux participantes pour réaliser petit à petit des briques de notre futur programme
 
-Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**. Il n'y **aucun ordre à a respecter**: Il y en a pour tous les niveaux !
+>
+> Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**. Il n'y **aucun ordre à a respecter**: Il y en a pour tous les niveaux !
 
 
 ### Aperçu de la difficulté des différentes briques :
@@ -156,7 +159,10 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier **"Guide pour encadrantes"**.
 
 
-Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, ainsi que **des exemples de code**. Pour des raisons évidentes il ne faut **surtout pas donner les corrections** aux participantes ! On n'apprend pas à coder en recopiant !
+Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, ainsi que **des exemples de code**. 
+
+>
+> Pour des raisons pédagogiques évidentes il ne faut **surtout pas donner les corrections** aux participantes ! Personne n'apprend à coder en recopiant !
 
 
 ## Une troisième partie de **package python** fait maison : crackrar
@@ -322,7 +328,8 @@ Par exemple, si on attaque avec un dictionnaire qui contient le mot "test", on p
 
 Ceci est d'ailleurs l'objet d'une brique à construire.
 
-**Intérêt**: *L'intérêt de créer ces modifications est que si le propriétaire du mot de passe a légèrement modifé un mot du dictionnaire mais en utilisant des tactiques courantes (exemple: Faire démarrer par une majuscule, utiliser alternativement des majuscules ou minuscules...) alors on pourra quand même trouver son mot de passe, sans ajouter beaucoup de temps de calcul, et de manière très modulaire.*
+>
+> **Intérêt**: *L'intérêt de créer ces modifications est que si le propriétaire du mot de passe a légèrement modifé un mot du dictionnaire mais en utilisant des tactiques courantes (exemple: Faire démarrer par une majuscule, utiliser alternativement des majuscules ou minuscules...) alors on pourra quand même trouver son mot de passe, sans ajouter beaucoup de temps de calcul, et de manière très modulaire.*
 
 ### L'objet "Stratégie" (strategy)
 
@@ -370,4 +377,5 @@ my_strategy.launch_attack(rarfile,SHOW_STDOUT=True)
 
 ```
 
-L'option "SHOW_STDOUT" de la méthode "launch_attack" permet d'afficher (ou non) les combinaisons essayées sur la sortie standard (l'écran)
+>
+> L'option "SHOW_STDOUT" de la méthode "launch_attack" permet d'afficher (ou non) les combinaisons essayées sur la sortie standard (l'écran)
