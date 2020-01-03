@@ -9,7 +9,7 @@ L'ensemble des informations relatives à l'initiative codingsisters sont disponi
 http://codingsisters.fr/
 
 
-Ce Github consiste à expliquer comment cracker un fichier RAR en python. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
+Ce Github consiste à expliquer comment **hacker un mot de passe** en **python**. Notamment, le mot de passe d'un **fichier .rar**. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
 
 ## A propos du projet
 
@@ -29,10 +29,7 @@ Est-ce qu'on peut vraiment commencer à hacker à partir de si peu ?
 Réponse: **Oui !** En dernière partie, nous vous donnerons quelques notions de cryptographie pour que vous compreniez les limites de ce que vous apprendrez ici. Néanmoins, il s'agit d'un vrai exemple de hacking.
 
 
-## Compétences/connaissances maîisées au fur et à mesure de l'avancée du projet
-
-
-### Prérequis
+## Prérequis
 
 
 - Qu'est-ce qu'un **programme** ? Qu'est-ce que la **ligne de commande** ?
@@ -53,7 +50,10 @@ Réponse: **Oui !** En dernière partie, nous vous donnerons quelques notions de
 Et... C'est tout !
 
 
-### Nous apprendrons au fur et à mesure à:
+***Les "briques" que nous allons créer sont pensées pour pouvoir être réalisées indépendamment les unes des autres selon votre niveau***
+
+
+## Nous apprendrons au fur et à mesure à:
 
 
 - **Lire un fichier** ligne par ligne en python
@@ -73,7 +73,7 @@ Et... C'est tout !
 - Se familiariser avec des **principes de base de cryptographie**
 
 
-## Contenu
+## Contenu de ce répertoire GitHub
 
 
 Ce projet contient plusieurs parties pour guider le travail des participantes et servir de support aux encadrantes:
@@ -90,10 +90,29 @@ Les documents y sont **numérotés dans l'ordre *indicatif* à suivre / ordre de
 
 Nous donnons **quelques clés** aux participantes pour réaliser petit à petit des briques de notre futur programme
 
-Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**.
+Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**. Il n'y **aucun ordre à a respecter**: Il y en a pour tous les niveaux !
 
-#### Aperçu de la difficulté des différentes étapes :
+#### Aperçu de la difficulté des différentes briques :
 
+Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de commencer à n'importe laquelle.
+
+- Utiliser crackrar pour cracker un mot de passe en ligne de commande **NIVEAU1**
+
+- Tester un mot de passe .rar en python **NIVEAU 1**
+
+- Tester tous les nombres possibles **NIVEAU 1**
+
+- Tester tous les mots de passe stockés dans un fichier **NIVEAU 1**
+
+- Faire une attaque par dictionnaire **NIVEAU 1**
+
+- Comprendre, utiliser et créer des **itérateurs** : **NIVEAU 2**
+
+- Tester toutes les combinaisons de lettres possibles avec **string** et **itertools* : **NIVEAU 2**
+
+- Tester tous les codes PIN possibles **NIVEAU 2**
+
+- 
 
 [ Mettre des niveaux avec étoile pour signaler la difficulté des différentes briques/étapes ]
 
@@ -152,6 +171,42 @@ optional arguments:
                         passwords tried are printed on stdout [highly                        
                         deprectaded : Performances issues). DEFAULT: INFO                        
 ```
+
+### Exemple d'usage
+
+Cracker un mot de passe composé de [par défaut] 4 chiffres
+
+```console
+user@computer:$ rarcrack notes.rar --charset digits
+2020-01-03 10:11:52,730 [INFO] Using charset --> digits
+2020-01-03 10:11:52,730 [INFO] Attack started at 1578042712.7302287
+2020-01-03 10:12:52,293 [INFO] found password 1789 for file /export/home1/users/gmc/delevoye/Github/sisters-rarcrack/sistersrarcrack/test_package/testdata/notes.rar
+2020-01-03 10:12:52,293 [INFO] Duration : 59 s
+```
+
+Afficher sur la sortie standard les combinaisons essayées:
+
+```console
+user@computer:$ rarcrack notes.rar -v SHOW_PSW -l 3
+aaa
+aab
+aac
+aad
+aae
+aaf
+aag
+aah
+aai
+aaj
+aak
+...
+```
+
+### Remarque sur la performance
+
+
+Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous utilisons du python, mais au fait que **l'ouverture d'un fichier .rar et la vérification de la clé sont lents**. 
+
 
 ### Principes python du package crackrar
 
@@ -247,7 +302,6 @@ Par exemple: 8 caractères avec au moins un chiffre, une majuscule et un caract�
 Pour résumer avec un exemple, on utilise la stratégie de la façon suivante
 
 ```python
-
 # On possède nos fonctions qui permettent de générer des lettres de l'alphabet minuscule
 
 def my_generator_letters(): # L'objet attackDict sera crée à partir de ce générateur
@@ -259,17 +313,17 @@ def my_generator_letters(): # L'objet attackDict sera crée à partir de ce gén
 def from_small_to_large_letter(letter):
     yield letter.lower()
     yield letter.upper()
-    
+```
+
+```python    
 # On importe alors le package
 import crackrar as cr
 
 # On va crée un dictionnaire d'attaque ("attackDict"): les lettres de l'alphabet
 # On crée l'objet attackDict à partir de l'itérateur
-
 my_attack_dict = cr.attackDict(my_generator_letters)
 
 # On va rajouter à notre itérateur la possibilité de faire les majuscules
-
 my_attack_dict.add_mutation(from_small_to_large_letter)
 
 # Et à partir de ce dictionnaire "muté" on crée une stratégie où on va tester toutes les possibilités de combinaisons
@@ -284,6 +338,3 @@ my_strategy.launch_attack(rarfile,SHOW_STDOUT=True)
 ```
 
 L'option "SHOW_STDOUT" de la méthode "launch_attack" permet d'afficher (ou non) les combinaisons essayées sur la sortie standard (l'écran)
-
-
-[Implémentation en cours, pas terminée pour les cas hors brute-force]
