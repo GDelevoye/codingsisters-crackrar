@@ -1,6 +1,6 @@
 # sisters-crackrar
 
-## A propos des coding sisters
+# A propos des coding sisters
 
 L'initiative "coding sisters" consiste à accueillir des lycéennes parisiennes pour les initier au code
 
@@ -11,7 +11,7 @@ http://codingsisters.fr/
 
 Ce Github consiste à expliquer comment **hacker un mot de passe** en **python**. Notamment, le mot de passe d'un **fichier .rar**. Il s'agit de l'un des sujets qui sont proposés comme projet au tutorat.
 
-## A propos du projet
+# A propos du projet
 
 
 Dans ce projet nous verrons plusieurs stratégies pour hacker des mots de passe. 
@@ -29,7 +29,7 @@ Est-ce qu'on peut vraiment commencer à hacker à partir de si peu ?
 Réponse: **Oui !** En dernière partie, nous vous donnerons quelques notions de cryptographie pour que vous compreniez les limites de ce que vous apprendrez ici. Néanmoins, il s'agit d'un vrai exemple de hacking.
 
 
-## Prérequis
+# Prérequis
 
 
 - Qu'est-ce qu'un **programme** ? Qu'est-ce que la **ligne de commande** ?
@@ -56,7 +56,7 @@ Et... C'est tout !
 
 
 
-## Nous apprendrons au fur et à mesure à:
+# Nous apprendrons au fur et à mesure à:
 
 
 - **Lire un fichier** ligne par ligne en python
@@ -78,13 +78,13 @@ Et... C'est tout !
 - Se familiariser avec des **principes de base de cryptographie**
 
 
-## Contenu de ce répertoire GitHub
+# Contenu de ce répertoire GitHub
 
 
 Ce projet contient plusieurs parties pour guider le travail des participantes et servir de support aux encadrantes:
 
 
-### Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
+## Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
 
 
 Cette partie est située dans le dossier **"Guide pour participantes"**. 
@@ -99,12 +99,12 @@ Nous donnons **quelques clés** aux participantes pour réaliser petit à petit 
 Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**. Il n'y **aucun ordre à a respecter**: Il y en a pour tous les niveaux !
 
 
-#### Aperçu de la difficulté des différentes briques :
+### Aperçu de la difficulté des différentes briques :
 
 
 Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de commencer à n'importe laquelle.
 
-[ Niveau 1 - Ligne de commande, boucles, lecture de fichier ]
+#### [ Niveau 1 - Ligne de commande, boucles, lecture de fichier ]
 
 - Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **- NIVEAU1**
 
@@ -116,7 +116,7 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - Faire une **attaque par dictionnaire** **NIVEAU 1**
 
-[ Niveau 2 - Créer des itérateurs particuliers ]
+#### [ Niveau 2 - Créer des itérateurs particuliers ]
 
 - Comprendre, utiliser et créer des **itérateurs** : **- NIVEAU 2**
 
@@ -130,19 +130,19 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - Muter les majuscules/minuscules d'une séquence **- NIVEAU 2**
 
-[ Niveau 3 - Programmation orientée objet ]
+#### [ Niveau 3 - Programmation orientée objet ]
 
-- Utiliser les **objets** du package crackrar pour créer des **mutations()** **- NIVEAU 3***
+- Utiliser les **objets** du package crackrar pour créer des **mutations()**, **- NIVEAU 3***
 
-- **Combiner** les séquences avec l'objet **strategy()** **- Niveau 3**
+- **Combiner** les séquences avec l'objet **strategy()**, **- Niveau 3**
 
-[ Niveau 4 - Développement ]
+#### [ Niveau 4 - Développement ]
 
 - ***Le challenge du kikoO***: cracker un MoTd£p@sS€ **- Niveau 4** ++
 
 - ***Une vraie développeuse:*** Modifier crackrar pour attaquer des fichiers .zip **- Niveau 4** ++
 
-[ FIN - Remarques et conclusion ]
+#### [ FIN - Remarques et conclusion ]
 
 - Sécurité des mots de passe, entre fantasmes et réalités 
 
@@ -150,7 +150,7 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 
 
-### Une deuxième partie **pour les encadrantes**
+## Une deuxième partie **pour les encadrantes**
 
 
 Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier **"Guide pour encadrantes"**.
@@ -159,13 +159,13 @@ Cette partie contient là aussi des jupyter notebook et des PDF. Elle est access
 Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, ainsi que **des exemples de code**. Pour des raisons évidentes il ne faut **surtout pas donner les corrections** aux participantes ! On n'apprend pas à coder en recopiant !
 
 
-### Une troisième partie de **package python** fait maison : crackrar
+## Une troisième partie de **package python** fait maison : crackrar
 
 
 Ce répertoire GitHub est en lui-même un **package python fait maison** installable avec **pip** (voir *"Installation"*). est accessible dans le dossier **"crackrar"**.
 
 
-## Installation du package crackrar
+# Installation du package crackrar
 
 
 ```bash
@@ -174,10 +174,10 @@ https://github.com/GDelevoye/crackrar.git
 pip install ./crackrar
 ```
 
-## Utilisation du package
+# Utilisation du package
 
 
-### Command-line interface (CLI)
+## Command-line interface (CLI)
 
 ```console
 user@computer:$ crackrar -h
@@ -206,7 +206,7 @@ optional arguments:
                         deprectaded : Performances issues). DEFAULT: INFO                        
 ```
 
-### Exemple d'usage
+## Exemple d'usage
 
 Cracker un mot de passe composé de [par défaut] 4 chiffres
 
@@ -233,16 +233,16 @@ aah
 ...
 ```
 
-### Remarque sur la performance
+## Remarque sur la performance
 
 
 Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous utilisons du python, mais au fait que **l'ouverture d'un fichier .rar et la vérification de la clé sont lents**. 
 
 
-### Principes python du package crackrar
+## Principes python du package crackrar
 
 
-#### Vue d'ensemble
+### Vue d'ensemble
 
 
 Le package est fait de telle sorte qu'on peut soit faire du brute force total (option 1), soit faire des attaques par dictionnaire (option 2), soit combiner différents types d'approches.
@@ -256,7 +256,7 @@ Pour combiner les attaques, nous utiliserons trois concepts:
 - La **stratégie d'attaque**
 
 
-#### L'objet "dictionnaire d'attaque" (attackDict)
+### L'objet "dictionnaire d'attaque" (attackDict)
 
 
 L'objet attackDict se crée à partir d'un générateur
@@ -280,7 +280,7 @@ mydict = cr.attackDict(my_generator_letters)
 Ce dictionnaire permettra donc de faire des attaques avec des lettres en minuscules de A à Z
 
 
-#### L'objet "mutation"
+### L'objet "mutation"
 
 Si maintenant on voudrait faire des lettres majuscules, on peut soit faire un nouveau générateur comme suit:
 
@@ -324,7 +324,7 @@ Ceci est d'ailleurs l'objet d'une brique à construire.
 
 **Intérêt**: *L'intérêt de créer ces modifications est que si le propriétaire du mot de passe a légèrement modifé un mot du dictionnaire mais en utilisant des tactiques courantes (exemple: Faire démarrer par une majuscule, utiliser alternativement des majuscules ou minuscules...) alors on pourra quand même trouver son mot de passe, sans ajouter beaucoup de temps de calcul, et de manière très modulaire.*
 
-#### L'objet "Stratégie" (strategy)
+### L'objet "Stratégie" (strategy)
 
 L'objet stratégie va nous permettre de choisir des "stratégies" globales d'attaque pour restreindre l'attaque
 
