@@ -1,4 +1,4 @@
-# sisters-rarcrack
+# sisters-crackrar
 
 ## A propos des coding sisters
 
@@ -71,6 +71,8 @@ Et... C'est tout !
 
 - Utiliser le module **itertools** pour tester des millions de combinaisons
 
+- Trouver des **heursitiques d'attaque** et les **implémenter**
+
 - **Estimer** le temps que son code va prendre avec le module **time**
 
 - Se familiariser avec des **principes de base de cryptographie**
@@ -87,6 +89,7 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 
 Cette partie est située dans le dossier **"Guide pour participantes"**. 
 
+
 Ce dossier contient des **Jupyter notebook** et des **PDF** correspondant à chaque chapitre. 
 
 Les documents y sont **numérotés dans l'ordre *indicatif* à suivre / ordre de difficulté**
@@ -95,11 +98,13 @@ Nous donnons **quelques clés** aux participantes pour réaliser petit à petit 
 
 Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**. Il n'y **aucun ordre à a respecter**: Il y en a pour tous les niveaux !
 
+
 #### Aperçu de la difficulté des différentes briques :
+
 
 Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de commencer à n'importe laquelle.
 
-- Utiliser crackrar pour cracker un mot de passe en ligne de commande **NIVEAU1**
+- Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **NIVEAU1**
 
 - Tester un mot de passe .rar en python **NIVEAU 1**
 
@@ -113,11 +118,25 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - Tester toutes les combinaisons de lettres possibles avec **string** et **itertools* : **NIVEAU 2**
 
-- Tester tous les codes PIN possibles **NIVEAU 2**
+- Tester tous les codes PIN à 4 chiffres possibles **NIVEAU 2**
 
-- 
+- Tester toutes les dates de naissance possibles **NIVEAU 2**
 
-[ Mettre des niveaux avec étoile pour signaler la difficulté des différentes briques/étapes ]
+- Tester tous les digicodes possibles **NIVEAU 2**
+
+- Muter les majuscules/minuscules d'une séquence **NIVEAU 2**
+
+- Utiliser les **objets** du package crackrar pour créer des **mutations()** **NIVEAU 3***
+
+- Combiner les attaques avec l'objet **strategy()** **Niveau 3**
+
+- Le challenge du kikoO: cracker un MoTd£p@sS€ **Niveau 4**
+
+- Modifier crackrar pour attaquer des fichiers .zip **Niveau 4**
+
+- REMARQUE : Sécurité des mots de passe, entre fantasmes et réalités **Niveau 0**
+
+- Disgression finale: Par où continuer si l'on veut devenir hackeuse ?
 
 
 
@@ -125,6 +144,7 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 
 Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier **"Guide pour encadrantes"**.
+
 
 Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, ainsi que **des exemples de code**. Pour des raisons évidentes il ne faut **surtout pas donner les corrections** aux participantes ! On n'apprend pas à coder en recopiant !
 
@@ -145,6 +165,7 @@ pip install ./crackrar
 ```
 
 ## Utilisation du package
+
 
 ### Command-line interface (CLI)
 
@@ -199,9 +220,6 @@ aae
 aaf
 aag
 aah
-aai
-aaj
-aak
 ...
 ```
 
@@ -294,7 +312,7 @@ Par exemple, si on attaque avec un dictionnaire qui contient le mot "test", on p
 
 Ceci est d'ailleurs l'objet d'une brique à construire.
 
-C'est-à-dire que si le propriétaire du mot de passe a légèrement modifé un mot du dictionnaire mais en utilisant des tactiques courantes (exemple: Faire démarrer par une majuscule, utiliser alternativement des majuscules ou minuscules...) alors on pourra quand même trouver son mot de passe, sans ajouter beaucoup de temps de calcul, et de manière très modulaire.
+**Intérêt**: *L'intérêt de créer ces modifications est que si le propriétaire du mot de passe a légèrement modifé un mot du dictionnaire mais en utilisant des tactiques courantes (exemple: Faire démarrer par une majuscule, utiliser alternativement des majuscules ou minuscules...) alors on pourra quand même trouver son mot de passe, sans ajouter beaucoup de temps de calcul, et de manière très modulaire.*
 
 #### L'objet "Stratégie" (strategy)
 
@@ -330,10 +348,12 @@ my_attack_dict = cr.attackDict(my_generator_letters)
 my_attack_dict.add_mutation(from_small_to_large_letter)
 
 # Et à partir de ce dictionnaire "muté" on crée une stratégie où on va tester toutes les possibilités de combinaisons
-# Ici, on testera les possibilités de taille 6 (6 lettres majuscules ou minuscules)
+# Ici, on testera les possibilités de taille 5 (5 lettres majuscules ou minuscules)
 
 my_strategy = cr.Strategy()
-my_strategy.add_attack_dict(my_attack_dict)
+my_strategy.add_attack_dict(my_attack_dict,fold=5) 
+# "fold" précise le nombre de fois qu'on ajoute l'attackDict
+# "4" signifie donc ici qu'on utilisera 5 fois cet attackDict
 
 # Puis ensuite on attaque un fichier RAR
 my_strategy.launch_attack(rarfile,SHOW_STDOUT=True)
