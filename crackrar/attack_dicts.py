@@ -18,11 +18,13 @@ class attackDict(object):
 
     def generate(self):
         for elt in self.generator(*self.generator_args,**self.generator_kwargs):
-            yield elt
             if self.mutations_list:
                 for mutation in self.mutations_list:
                     mutated_elt = mutation(elt)
-                    yield elt
+                    yield mutated_elt
+            else:
+                yield elt
+
 
 class bruteAttackDict(attackDict):
     def __init__(self,charsets):

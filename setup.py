@@ -8,7 +8,7 @@ except ImportError:  # for pip <= 9.0.3
 
 setup(
 
-    name='sistersrarcrack',
+    name='crackrar',
     install_requires=["rarfile",
 "tqdm",
 "more-itertools"
@@ -19,12 +19,12 @@ setup(
     packages=find_packages(),
     author="Delevoye Guillaume",
     author_email="delevoye.guillaume@gmail.com",
-    description="Projet de cracking de fichiers .rar pour les coding sisters",
+    description="Projet pour les coding sisters: cracker un fichier rar",
     long_description=open('README.md').read(),
-    url='https://github.com/GDelevoye/sisters-rarcrack',
+    url='https://github.com/GDelevoye/codingsisters-crackrar',
 
     include_package_data=True,
-    entry_points={'console_scripts': ['rarcrack=sistersrarcrack.launchers.rarcrack:rarcrack']},
+    entry_points={'console_scripts': ['crackrar=crackrar.launchers.crackrar:crackrar',"brutegen=crackrar.launchers.brutegen:brutegen"]},
 
     # La liste des marqueurs autorisés
     # https://pypi.python.org/pypi?%3Aaction=list_classifiers.

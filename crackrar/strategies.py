@@ -1,7 +1,7 @@
 import time
 import logging
 import itertools
-from sistersrarcrack.rar_ouverture import essayer_mdp
+from crackrar.rar_ouverture import essayer_mdp
 
 import sys
 
@@ -61,3 +61,14 @@ class Strategy(object):
 
         logging.error("[ERROR] Couldn't find password for file {} with strategy {}. Try another strategy".format(rarfile,self))
         logging.info("[INFO] Duration : {} s".format(round(time.time() - start),2))
+
+class bruteGenStrategy(Strategy):
+    def __init__(self):
+        super().__init__()
+    def launch_attack(self): # Overridingthis
+        """ This fuction try every password in the generator and chronometers it"""
+        self._compute_attack_dicts()
+
+        for elt in itertools.product(*[self.lists_possibles[x] for x in range(len(self.attack_dicts))],repeat=1):
+            elt = "".join([str(x) for x in elt])
+            sys.stdout.write(elt+'\n')

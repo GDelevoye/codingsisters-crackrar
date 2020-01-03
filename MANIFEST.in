@@ -1,1 +1,1 @@
-recursive-include sistersrarcrack *.py *.rar *.csv *.ipynb *.odf *.pdf *.txt
+recursive-include crackrar *.py *.rar *.csv *.ipynb *.odf *.pdf *.txt
