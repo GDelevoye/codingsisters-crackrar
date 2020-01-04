@@ -403,7 +403,7 @@ Nous avons vu que les objets attackDict (mutés ou non) sont crées à partir d'
 Nous avons vu que les stratégies sont crées à partir des objets attackDict
 
 
-Maintenant, comprenez que **les attackDict et les stratégies SONT des itérables.**
+IL faut comprendre ensuite que **les attackDict et les stratégies** ***sont*** **des itérables.**
 
 >
 > C'est à dire qu'à partir d'une stratégie, vous pouvez la combiner avec une a utre. Vous pouvez créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). Vous pouvez combiner ensemble le résultat d'une stratégie A avec un nouveau dictionnaire. Vous pouvez par exemple, combiner les recherches de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"***
