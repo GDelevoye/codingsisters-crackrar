@@ -189,6 +189,28 @@ Il contient deux programmes utilisables en ligne de commande : ***crackrar**** e
 > Il s'agit de deux programmes assez rudimentaires. Le but va être de s'en inspirer pour faire des programmes plus "intelligents".
 
 
+### Autre: Des exemples de dictionnaires
+
+Dans ***~/crackrar/crackrar/data/*** on trouvera plusieurs dictionnaires au format texte (une ligne par mot):
+
+- 10 millions de mots de passe aléatoires
+
+- 1000 mots parmi les plus fréquents en français
+
+- Une liste de 10.000 mots de passe parmi les plus utilisés au monde
+
+- Un dictionnaire de 330.000 mots français
+
+- Les 75 mots de passe les plus fréquets de tous les temps (pas nécessairement dans l'ordre)
+
+- Une liste de prénoms français (en majuscules)
+
+- Un .csv qui reprend ces prénoms mais permet aussi de les classer par abondance
+
+
+Cela permet de réaliser des attaques par dictionnaire
+
+
 # Installation du package crackrar
 
 
