@@ -151,6 +151,11 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - ***Une vraie développeuse:*** Modifier crackrar pour attaquer des fichiers .zip **- Niveau 4** ++
 
+- ***Multiplier, permuter, combiner:*** Modifier crackrar de façon **ergonomique** (en utilisant **argparse** et en modifiant le lanceur **crackrar.py**) pour utiliser un mixte de brute-force et d'attaques dictionnaire (exemple: 1 lettre, 1 caractère spécial, 1 majuscule, 1 mot en minuscule d'un dictionnaire) **- Niveau super-boss**
+
+> 
+> C'est plus dur qu'il n'y paraît
+
 #### [ FIN - Remarques et conclusion ] (facultatif - TOUT PUBLIC)
 
 - Sécurité des mots de passe, entre fantasmes et réalités
