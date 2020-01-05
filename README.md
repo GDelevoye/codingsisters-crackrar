@@ -432,10 +432,6 @@ Ceci est d'ailleurs l'objet d'une brique à construire.
 
 L'objet stratégie va nous permettre de choisir comment nous allons planifier et exécuter l'attaque
 
-Paradoxalement, si un utilisateur prudent respecte ces règles de sécurité, la plupart du temps il va respecter ***pile*** ces règles. C'est ainsi qu'il restreindra sans le savoir les possibilités: chercher un mot de passe qui respecte toutes les contraintes (8 caractères dont un spécial, une majuscule, une minuscule et un chiffre) est **bien plus facile** que "un mot de passe d'au moins 9 caractères sans restriction"
-
-Pour résumer avec un exemple, on utilise la stratégie de la façon suivante (les commentaires aident à comprendre le code et comment il s'utilise)
-
 ```python
 # On possède nos fonctions qui permettent de générer des lettres de l'alphabet minuscule
 
