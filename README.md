@@ -210,6 +210,9 @@ Dans ***~/crackrar/crackrar/data/*** on trouvera plusieurs dictionnaires au form
 
 Cela permet de réaliser des attaques par dictionnaire
 
+On trouve aussi: Les mono, bi, tri et quadgrams de la langue française avec leur abondance
+
+Cela permet de générer des mots qui pourront "sonner français" sans pour autant être des mots de français
 
 # Installation du package crackrar
 
