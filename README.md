@@ -65,6 +65,8 @@ Et... C'est tout !
 
 - **installer** et utiliser un **package** pour utiliser ses **fonctions**
 
+- **Faire du brute force en ligne de commande**: brutegen et crackrar
+
 - **Ouvrir un fichier RAR** en python et **tester** le mot de passe
 
 - Utiliser les **générateurs**
