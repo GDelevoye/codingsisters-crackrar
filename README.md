@@ -343,17 +343,28 @@ delevoye@gmcpc04:~/Github/crackrar/crackrar/test_package/testdata$ brutegen -l 4
 
 C'est-à-dire que le CPU peut générer un peu plus de **1 million de combinaisons par secondes avec brutegen** (en python !)
 
-Cependant si on regarde le temps que met **crackrar** pour attaquer un fichier, on s'aperçoit que sur une machine moyenne on est **plutôt entre 30 et 60 essais par seconde**
+Cependant si on regarde le temps que met **crackrar** pour attaquer un fichier, on s'aperçoit que sur une machine moyenne on est **plutôt entre ~30 à 50 essais par seconde**:
+
+```console
+user@computer:~/crackrar/crackrar/test_package/testdata$ crackrar notes.rar -l 4 -c digits -v SHOW_PSW | python -m tqdm | wc -l
+1790it [00:59, 29.96it/s]
+```
+
+A quoi cela est-t-il dû ?
 
 
 >
->Le temps de calcul en python est **négligeable** par rapport au temps d'ouverture du fichier .rar / la vérification de la clé. C'est-à-dire qu'on ira aussi vite à tester un brute-force total de 4 caractères qu'à tester un brute force de 4 mots parmi un dictionnaire d'une centaine de mots. SI l'on a de la chance on peut alors cracker très rapidement des mots de passe de 15, 20 caractères qui seraient ***impossibles*** à cracker en brute force.
+>Le temps de calcul en python est **négligeable** par rapport au temps d'ouverture du fichier .rar / la vérification de la clé. 
+
+Lorsque l'on travaille avec **brutegen**, la taille des mots de passe à générer impacte les performances. Si on passe la taille du mot de passe de **n=4** à **n=12**, on **diminue de 50%** les performances. Par contre si on travaille avec **crackrar**, cette perte reste totalement négligeable !
 
 
-En revanche, la taille du mot de passe n'a quasiment aucune incidence sur la vitesse de crackage. On testera autant de mots de passe par seconde peu importe qu'on ait des clés de 20 caractères ou de 4 caractères.
+La relative lenteur de python par rapport à d'autres langages réputés plus rapides (comme le langage C par exemple) n'est donc absolument pas handicapante ici: Le problème c'est l'ouverture du fichier .RAR !
+
+>
+> On ne peut donc pas tester rapidement les combinaisons sur un fichier .RAR. Les mots de passe sont donc plus durs à trouver: IL faut idéalement utiliser d'autres stratégies que le brute-force (exemple: attaque par dictionnaire)
 
 
-La relative lenteur de python par rapport à d'autres langages réputés plus rapides (comme le langage C par exemple) n'est donc absolument pas handicapante ici.
 
 ## Usage en python du package crackrar
 
