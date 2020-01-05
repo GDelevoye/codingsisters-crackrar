@@ -218,22 +218,31 @@ Cela permet de générer des mots qui pourront "sonner français" sans pour auta
 
 
 ```bash
-https://github.com/GDelevoye/crackrar.git
-
+git clone https://github.com/GDelevoye/codingsisters-crackrar.git
+mv ./codingsisters-crackrar crackrar
 pip install ./crackrar
 ```
 
 Et voila !
 
 >
->*Si on veut pouvoir modifier le package pour y ajouter nos propres fonctions on peut l'installer en mode "editable package" de la façon suivante:*
+>*Si on veut pouvoir modifier le package pour y ajouter nos propres fonctions on peut l'installer en mode "editable package". Il faut alors utiliser l'argument "-e" dans la dernière ligne (pip install [...]) de la façon suivante:*
 >
 >
->```bash
->pip install -e ./crackrar
->```
 
-De cette façon, on peut modifier le package
+```bash
+pip install -e ./crackrar
+```
+
+De cette façon, on peut modifier le package tout en continuant à l'utiliser
+
+>
+> En cas d'erreur dans la modification, les participantes pourront revenir en arrière car le fichier est gité
+
+```bash
+user@computer:$cd crackrar
+user@computer:$git checkout master .
+```
 
 
 # Utilisation du package
