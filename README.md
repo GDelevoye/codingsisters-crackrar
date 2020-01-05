@@ -147,6 +147,8 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - ***Le challenge du kikoO***: cracker un MoTd£p@sS€ **- Niveau 4** ++
 
+- ***Une histoire de tuyaux***: Lire directement des propositions sur l'entrée standard pour les transformer **- Niveau 4**++
+
 - ***Une vraie développeuse:*** Modifier crackrar pour attaquer des fichiers .zip **- Niveau 4** ++
 
 #### [ FIN - Remarques et conclusion ] (facultatif - TOUT PUBLIC)
