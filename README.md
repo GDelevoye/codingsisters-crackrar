@@ -494,3 +494,8 @@ L'une des pistes d'amélioration du package que les participantes peuvent coder 
 >
 > C'est à dire qu'à partir d'une stratégie, on pourra la combiner avec une autre. On pourra créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). On pourra par exemple, faire une recherche de mot de passe de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"*** etc.
 
+>
+> De nombreux tutoriels expliquent comment rendre un objet itérable en ligne. Ex:
+> [ https://www.programiz.com/python-programming/iterator ]
+
+
