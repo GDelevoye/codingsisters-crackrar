@@ -34,7 +34,7 @@ Réponse:
 # Prérequis
 
 
-- Qu'est-ce qu'un **programme** ? Qu'est-ce que la **ligne de commande** ?
+- Qu'est-ce qu'un **programme** ? Qu'est-ce que la **ligne de commande** ? 
 
 - **Utiliser l'interpréteur python** et sauvegarder un **script**
 
@@ -163,16 +163,30 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 Cette partie contient là aussi des jupyter notebook et des PDF. Elle est accessible dans le dossier **"Guide pour encadrantes"**.
 
 
+>
+> Ce README fait également partie du support pour les encadrantes !
+
+
 Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, ainsi que **des exemples de code**. 
 
 >
 > Pour des raisons pédagogiques évidentes il ne faut **surtout pas donner les corrections** aux participantes ! Personne n'apprend à coder en recopiant !
 
 
-## Une troisième partie de **package python** fait maison : crackrar
+## Une troisième partie de **package python** fait maison : crackrar,
 
 
 Ce répertoire GitHub est en lui-même un **package python fait maison** installable avec **pip** (voir *"Installation"*). est accessible dans le dossier **"crackrar"**.
+
+Il contient deux programmes utilisables en ligne de commande : ***crackrar**** et ***brutegen***. Le permier permet de cracker des fichiers .rar. Le deuxième permet de générer des tas de combinaisons.
+
+- **brutegen** permet d'afficher des mots de passe en brute force
+
+- **crackrar** permet de cracker des fichiers .rar, avec une interface similaire à brutegen
+
+
+>
+> Il s'agit de deux programmes assez rudimentaires. Le but va être de s'en inspirer pour faire des programmes plus "intelligents".
 
 
 # Installation du package crackrar
@@ -184,54 +198,103 @@ https://github.com/GDelevoye/crackrar.git
 pip install ./crackrar
 ```
 
+Et voila !
+
+>
+>*Si on veut pouvoir modifier le package pour y ajouter nos propres fonctions on peut l'installer en mode "editable package" de la façon suivante:*
+>
+>
+>```bash
+>pip install -e ./crackrar
+>```
+
+De cette façon, on peut modifier le package
+
+
 # Utilisation du package
 
 
 ## Command-line interface (CLI)
 
+
+Les deux programmes ont une interface d'utilisation similaire, à ceci près que **crackrar** prend en argument un fichier **.rar** et la possibilité d'ajuster la verbosité 
+
+### brutegen
+
+```console
+user@computer:$ brutegen -h
+usage: brutegen [-h] [--combination_length COMBINATION_LENGTH]
+                [--charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]]
+                [--dictionnary DICTIONNARY]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --combination_length COMBINATION_LENGTH, -l COMBINATION_LENGTH
+                        Length of brute-force. Default: 1
+  --charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...], -c {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]
+                        Choose among: lowercase, uppercase, digits,
+                        special_characters. DEFAULT: all of these.
+  --dictionnary DICTIONNARY, -d DICTIONNARY
+                        Paths of a file that contains words to use (one word
+                        per line). This would override the --charset argument.
+                        DEFAULT: [empty]
+
+```
+
+### crackrar
+
+
 ```console
 user@computer:$ crackrar -h
 usage: crackrar [-h] [--combination_length COMBINATION_LENGTH]
-                [--charsets {lowercase,uppercase,digits,special_characters}                
-                [{lowercase,uppercase,digits,special_characters} ...]]                
-                [--verbosity {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}]                
-                rarFile                
+                [--charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]]
+                [--dictionnary DICTIONNARY]
+                [--verbosity {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}]
+                rarFile
 
 positional arguments:
-  rarFile               Path to the .rar file  
+  rarFile               Path to the .rar file
 
 optional arguments:
-  -h, --help            show this help message and exit  
-  --combination_length COMBINATION_LENGTH, -l COMBINATION_LENGTH  
-                        How many times must the attackDicts be combined                        
-                        (DEFAULT: 4)                        
-  --charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...], -c {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]  
-                        List of all types of characters among: lowercase,                        
-                        uppercase, digits, special_characters. DEFAULT:                        
-                        contains them all                        
-  --verbosity {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}, -v {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}  
-                        Verbosity among: DEBUG, INFO, WARNING, ERROR,                        
-                        CRITICAL, STDOUT_PSW". If set to STDOUT_PASW,                        
-                        passwords tried are printed on stdout [highly                        
-                        deprectaded : Performances issues). DEFAULT: INFO                        
+  -h, --help            show this help message and exit
+  --combination_length COMBINATION_LENGTH, -l COMBINATION_LENGTH
+                        Length of brute-force. Default: 1
+  --charsets {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...], -c {lowercase,uppercase,digits,special_characters} [{lowercase,uppercase,digits,special_characters} ...]
+                        Choose among: lowercase, uppercase, digits,
+                        special_characters. DEFAULT: all of these.
+  --dictionnary DICTIONNARY, -d DICTIONNARY
+                        Paths of a file that contains words to use (one word
+                        per line). This would override the --charset argument.
+                        DEFAULT: [empty]
+  --verbosity {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}, -v {DEBUG,INFO,WARNING,ERROR, CRITICAL,SHOW_PSW}
+                        Verbosity among: DEBUG, INFO, WARNING, ERROR,
+                        CRITICAL, STDOUT_PSW". If set to STDOUT_PASW,
+                        passwords tried are printed on stdout [highly
+                        deprectaded : Performances issues). DEFAULT: INFO
 ```
 
 ## Exemple d'usage
 
-Cracker un mot de passe composé de [par défaut] 4 chiffres
+### Crackrar
+
+Cracker un mot de passe en brute force avec une longueur de 4, uniquement des chiffres (digits)
+
+On utilisera donc -l 4 -c digits:
+
 
 ```console
-user@computer:$ rarcrack notes.rar --charset digits
-2020-01-03 10:11:52,730 [INFO] Using charset --> digits
-2020-01-03 10:11:52,730 [INFO] Attack started at 1578042712.7302287
-2020-01-03 10:12:52,293 [INFO] found password 1789 for file notes.rar
-2020-01-03 10:12:52,293 [INFO] Duration : 59 s
+user@computer:~/Github/crackrar/crackrar/test_package/testdata$ crackrar notes.rar -l 4 -c digits
+2020-01-05 14:49:44,507 [INFO] Attack started at 05/01/2020 14:49:44
+2020-01-05 14:50:21,313 [INFO] found password 1789 for file /export/home1/users/gmc/delevoye/Github/crackrar/crackrar/test_package/testdata/notes.rar
+2020-01-05 14:50:21,313 [INFO] Attack ended at 05/01/2020 14:50:21
+2020-01-05 14:50:21,313 [INFO] Duration : 36.81 s
+2020-01-05 14:50:21,313 [INFO] *** /!\ FOUND PASSWORD /!\ *** : 1789
 ```
 
-Afficher sur la sortie standard les combinaisons essayées:
+Afficher sur la sortie standard les combinaisons essayées au fur et à mesure:
 
 ```console
-user@computer:$ rarcrack notes.rar -v SHOW_PSW -l 3
+user@computer:$ crackrar notes.rar -v SHOW_PSW -l 3
 aaa
 aab
 aac
@@ -241,6 +304,26 @@ aaf
 aag
 aah
 ...
+```
+
+>
+> L'option -d permet d'utiliser un dictionnaire d'attaque (= un fichier avec un mot par ligne). Les arguments -c et -l sont alors ignorés
+
+### brutegen
+
+Le principe est très similaire
+
+
+```console
+delevoye@gmcpc04:~/Github/crackrar/crackrar/test_package/testdata$ brutegen -l 3
+aaa
+aab
+aac
+aad
+aae
+aaf
+aag
+aah
 ```
 
 ## Remarque sur la performance
@@ -254,6 +337,9 @@ Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous util
 La relative lenteur de python par rapport à d'autres langages réputés plus rapides (comme le langage C par exemple) n'est donc absolument pas handicapante ici.
 
 ## Principes python du package crackrar
+
+
+A partir du niveau 3, on propose aux participantes d'utiliser des concepts de POO en reprenant les objets du package. Le but ici est de vous donner un aperçu du fonctionnement de ces objets
 
 
 ### Vue d'ensemble
@@ -403,23 +489,8 @@ Nous avons vu que les objets attackDict (mutés ou non) sont crées à partir d'
 Nous avons vu que les stratégies sont crées à partir des objets attackDict
 
 
-IL faut comprendre ensuite que **les attackDict et les stratégies** ***sont*** **des itérables.**
+L'une des pistes d'amélioration du package que les participantes peuvent coder (NIveau 4 - Challenge) pourrait être de rendre les stratégies itérables en implémentant la fonction __iter__
 
 >
-> C'est à dire qu'à partir d'une stratégie, vous pouvez la combiner avec une a utre. Vous pouvez créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). Vous pouvez combiner ensemble le résultat d'une stratégie A avec un nouveau dictionnaire. Vous pouvez par exemple, combiner les recherches de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"***
+> C'est à dire qu'à partir d'une stratégie, on pourra la combiner avec une autre. On pourra créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). On pourra par exemple, faire une recherche de mot de passe de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"*** etc.
 
-C'est-à-dire que suite au code suivant:
-
-```python
-import crackrar as cr
-
-my_attack_dict = cr.attackDict(my_generator_letters)
-my_attack_dict.add_mutation(from_small_to_large_letter) 
-
-my_strategy = cr.Strategy()
-```
-
-... Vous pouvez ré-utiliser l'objet my_strategy pour la mixer avec d'autres stratégies
-
-
-Générer ce type de combinaisons peut être computationnellement intensif. Néanmoins comme nous l'avons dit, cela reste tout à fait marginal par rapport au temps nécessaire pour tester les clés dans le cas d'un fichier .RAR
