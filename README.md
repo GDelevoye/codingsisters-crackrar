@@ -349,7 +349,7 @@ Le principe est très similaire
 
 
 ```console
-delevoye@gmcpc04:~/Github/crackrar/crackrar/test_package/testdata$ brutegen -l 3
+user@computer:~/crackrar/crackrar/test_package/testdata$ brutegen -l 3
 aaa
 aab
 aac
@@ -370,7 +370,7 @@ Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous util
 
 
 ```console
-delevoye@gmcpc04:~/Github/crackrar/crackrar/test_package/testdata$ brutegen -l 4  | python -m tqdm | wc -l
+user@computer:~/crackrar/crackrar/test_package/testdata$ brutegen -l 4  | python -m tqdm | wc -l
 112550881it [01:42, 1095235.63it/s]
 112550881
 ```
