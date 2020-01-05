@@ -336,10 +336,10 @@ Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous util
 
 La relative lenteur de python par rapport à d'autres langages réputés plus rapides (comme le langage C par exemple) n'est donc absolument pas handicapante ici.
 
-## Principes python du package crackrar
+## Usage en python du package crackrar
 
 
-A partir du niveau 3, on propose aux participantes d'utiliser des concepts de POO en reprenant les objets du package. Le but ici est de vous donner un aperçu du fonctionnement de ces objets
+A partir du niveau 3, on propose aux participantes d'utiliser des concepts de POO en reprenant les objets du package. Le but ici est de vous donner un aperçu du fonctionnement de ces objets pour que les participantes puissent les utiliser voir les modifier.
 
 
 ### Vue d'ensemble
