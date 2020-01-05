@@ -3,6 +3,8 @@ import logging
 import itertools
 from crackrar.rar_ouverture import essayer_mdp
 
+from datetime import datetime
+
 import sys
 
 class Strategy(object):
@@ -36,7 +38,10 @@ class Strategy(object):
     def launch_attack(self,rarfile,SHOW_STDOUT=False):
         """ This fuction try every password in the generator and chronometers it"""
         start = time.time()
-        logging.info("[INFO] Attack started at {}".format(start))
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
+        logging.info("[INFO] Attack started at {}".format(dt_string))
 
         logging.debug("[INFO] Computing and adding the attackdicts to combine them")
 
@@ -54,19 +59,27 @@ class Strategy(object):
             if essayer_mdp(rarfile, mdp=elt, nom_fichier=None):
 
                 logging.info("[INFO] found password {} for file {}".format(elt,rarfile))
-                logging.info("[INFO] Duration : {}".format(time.time() - start))
+
+                now = datetime.now()
+                dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
+                logging.info("[INFO] Attack ended at {}".format(dt_string))
+                logging.info("[INFO] Duration : {} s".format(round(time.time() - start,2)))
+                logging.info("[INFO] *** /!\ FOUND PASSWORD /!\ *** : {}".format(elt))
                 self.found = elt
 
                 return elt
 
-        logging.error("[ERROR] Couldn't find password for file {} with strategy {}. Try another strategy".format(rarfile,self))
+        now = datetime.now()
+        dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+        logging.info("[INFO] Attack ended at {}".format(dt_string))
         logging.info("[INFO] Duration : {} s".format(round(time.time() - start),2))
+        logging.error("[ERROR] Couldn't find password for file {} with this strategy. Try another way".format(rarfile))
 
-class bruteGenStrategy(Strategy):
+class brutegenStrategy(Strategy):
     def __init__(self):
         super().__init__()
-    def launch_attack(self): # Overridingthis
-        """ This fuction try every password in the generator and chronometers it"""
+    def launch_attack(self): # Overriding the defaut 
         self._compute_attack_dicts()
 
         for elt in itertools.product(*[self.lists_possibles[x] for x in range(len(self.attack_dicts))],repeat=1):

@@ -30,6 +30,10 @@ class bruteAttackDict(attackDict):
     def __init__(self,charsets):
         super().__init__(custom_brute,charsets=charsets)
 
+class fileAttackDict(attackDict):
+    def __init__(self,path_to_file):
+        super().__init__(filedictionnary,path_to_file=path_to_file)
+
 
 ########### Now the common generators for brute-forcing
 
