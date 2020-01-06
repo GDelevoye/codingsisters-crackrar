@@ -159,7 +159,7 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 > 
 > Faire une solution propre est beaucoup plus dur qu'il n'y paraît !
 
-#### [ FIN - Remarques et conclusion ] (facultatif - TOUT PUBLIC)
+#### [ FIN - Remarques et conclusion ] (facultatif - TOUT PUBLIC) ### A FAIRE
 
 - Sécurité des mots de passe, entre fantasmes et réalités
 
