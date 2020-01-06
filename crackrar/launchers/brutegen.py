@@ -7,7 +7,7 @@ import crackrar as cr
 
 def brutegen():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--combination_length","-l",type=int,required=False,default=1,help="Length of brute-force. Default: 1")
+    parser.add_argument("--combination_length","-l",type=int,required=True,default=1,help="Length of brute-force. Default: 1")
     parser.add_argument('--charsets',"-c",
                             nargs='+',
                             help='Choose among: lowercase, uppercase, digits, special_characters. DEFAULT: all of these.',
@@ -27,6 +27,9 @@ def brutegen():
         raise RuntimeError("Choose a combination_length > 0")
     if not args.dictionnary and len(args.charsets) < 1:
         raise RuntimeError("Brutegen cannot generate brute forcing with 0 characters and 0 dictionnaries. Please refer to brutegen --help for more informations.")
+
+    logging.basicConfig(stream=sys.stdout, level="ERROR",
+                            format='%(asctime)s %(message)s')
 
     brute_strategy = cr.brutegenStrategy()
 

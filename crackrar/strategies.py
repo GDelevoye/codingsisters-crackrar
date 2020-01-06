@@ -3,6 +3,7 @@ import logging
 import itertools
 from crackrar.rar_ouverture import essayer_mdp
 
+# from tqdm import tqdm
 from datetime import datetime
 
 import sys
@@ -42,14 +43,17 @@ class Strategy(object):
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 
         logging.info("[INFO] Attack started at {}".format(dt_string))
-
         logging.debug("[INFO] Computing and adding the attackdicts to combine them")
 
         self._compute_attack_dicts()
 
         logging.debug("[INFO] *** All attackdicts are added. The attack begins **")
 
-        for elt in itertools.product(*[self.lists_possibles[x] for x in range(len(self.attack_dicts))],repeat=1):
+        myiterator = itertools.product(*[self.lists_possibles[x] for x in range(len(self.attack_dicts))],repeat=1)
+        # if not SHOW_STDOUT:
+        #     myiterator = tqdm(itertools.product(*[self.lists_possibles[x] for x in range(len(self.attack_dicts))],repeat=1),leave=True)
+
+        for elt in myiterator:
             elt = "".join([str(x) for x in elt])
 
             if SHOW_STDOUT:
@@ -57,7 +61,6 @@ class Strategy(object):
             # self.tried.append(elt) # Uncomment to debug
 
             if essayer_mdp(rarfile, mdp=elt, nom_fichier=None):
-
                 logging.info("[INFO] found password {} for file {}".format(elt,rarfile))
 
                 now = datetime.now()
@@ -79,7 +82,7 @@ class Strategy(object):
 class brutegenStrategy(Strategy):
     def __init__(self):
         super().__init__()
-    def launch_attack(self): # Overriding the defaut 
+    def launch_attack(self): # Overriding the defaut
         self._compute_attack_dicts()
 
         for elt in itertools.product(*[self.lists_possibles[x] for x in range(len(self.attack_dicts))],repeat=1):

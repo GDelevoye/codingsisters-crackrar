@@ -57,7 +57,13 @@ def crackrar():
     else:
         brute_strategy.add_attack_dict(cr.bruteAttackDict(charsets=args.charsets),max(0,args.combination_length))
 
-    brute_strategy.launch_attack(args.rarFile,SHOW_STDOUT=_cr_SHOW_STDOUT)
+
+    if args.dictionnary:
+        logging.info("[INFO] Using dictionnary file {}".format(args.dictionnary))
+    else:
+        logging.info('[INFO] Using brute force of length {} with the following charsets : {}'.format(args.combination_length,args.charsets))
+
+    return_value = brute_strategy.launch_attack(args.rarFile,SHOW_STDOUT=_cr_SHOW_STDOUT)
 
 if __name__ == "__main__":
     crackrar()

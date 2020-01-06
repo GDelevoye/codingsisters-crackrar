@@ -1,7 +1,7 @@
 import os
 import pytest
 
-from sistersrarcrack import essayer_mdp
+from crackrar.rar_ouverture import essayer_mdp
 
 @pytest.fixture
 def rootdir():
