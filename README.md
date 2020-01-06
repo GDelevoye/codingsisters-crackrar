@@ -3,7 +3,8 @@
 # Quick-start
 
 > Ce README a pour but uniquement de présenter le projet GitHub (l'initiative coding sisters, l'usage du logiciel, la structure du code, l'organisation du dépôt GitHub). 
-> Un guide PDF différent est disponible pour les encadrantes ("Guide pour encadrantes") comme pour les participantes ("Guide pour participantes").
+
+Le "Guide pour les participantes" contient les énoncés des problèmes proposés, et il est conseillé pour toutes de commencer par ce guide. Un second guide ("Guide pour les encadrantes") donne quelques clés de résolution pour les problèmes. Et le présent README donne tous les détails techniques nécessaires aussi bien pour les participantes que les encadrantes.
 
 # A propos des coding sisters
 
