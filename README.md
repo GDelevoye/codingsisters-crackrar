@@ -1,5 +1,12 @@
 # sisters-crackrar
 
+# Quick-start
+
+>
+> Le README est fait pour être lu aussi bien par les encadrantes que les participantes, mais
+les participantes devraient plutôt commencer par les PDF numérotés de "Guide pour participantes"
+
+
 # A propos des coding sisters
 
 L'initiative "coding sisters" consiste à accueillir des lycéennes de région parisienne pour les initier au code
