@@ -94,7 +94,7 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 Cette partie est située dans le dossier **"Guide pour participantes"**. 
 
 
-Ce dossier contient des **Jupyter notebook** et des **PDF** pour donner des pistes de résolution pour chacun des sous-problèmes. Les documents y sont **numérotés dans l'ordre *indicatif* à suivre / ordre de difficulté**. 
+Ce dossier contient des **PDF** pour donner des pistes de résolution pour chacun des sous-problèmes, ou présenter des possibilités d'ajouts utiles pour le projet final ("cracker un mot de passe").
 
 >
 > Il ne s'agit que d'un fil rouge, une aide. Toutes les participantes sont vivement encouragées à **suivre leur propre voix !**. Il n'y **aucun ordre à a respecter**: Il y en a pour tous les niveaux !
@@ -177,7 +177,7 @@ Cette partie contient là aussi des jupyter notebook et des PDF. Elle est access
 > Ce README fait également partie du support pour les encadrantes !
 
 
-Ce dossier contient essentiellement des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, ainsi que **des exemples de code**. 
+Ce dossier contient essentiellement **un fichier PDF** qui vient en complément de ce README et qui détaille des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, des propositions de concepts à présenter ou de librairies à utiliser, ainsi que **des exemples de code**. 
 
 >
 > Pour des raisons pédagogiques évidentes il ne faut **surtout pas donner les corrections** aux participantes ! Personne n'apprend à coder en recopiant !
