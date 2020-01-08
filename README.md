@@ -2,7 +2,7 @@
 
 # Quick-start
 
-> Ce README a pour but uniquement de présenter le projet GitHub (l'initiative coding sisters, l'usage du logiciel, la structure du code, l'organisation du dépôt GitHub). 
+> Ce README a pour but uniquement de présenter le projet GitHub (l'initiative coding sisters, l'usage du logiciel, la structure du code, l'organisation du dépôt GitHub).
 
 Le "Guide pour les participantes" contient les énoncés des problèmes proposés, et il est conseillé pour toutes de commencer par ce guide. Un second guide ("Guide pour les encadrantes") donne quelques clés de résolution pour les problèmes. Et le présent README donne tous les détails techniques nécessaires aussi bien pour les participantes que les encadrantes.
 
@@ -20,7 +20,7 @@ Ce Github consiste à expliquer comment **hacker un mot de passe** en **python**
 # A propos du projet
 
 
-Dans ce projet nous verrons plusieurs stratégies pour hacker des mots de passe. 
+Dans ce projet nous verrons plusieurs stratégies pour hacker des mots de passe.
 
 Nous aborderons un cas concrêt: **Les fichiers .rar cryptés**.
 
@@ -40,7 +40,7 @@ Réponse:
 # Prérequis
 
 
-- Qu'est-ce qu'un **programme** ? Qu'est-ce que la **ligne de commande** ? 
+- Qu'est-ce qu'un **programme** ? Qu'est-ce que la **ligne de commande** ?
 
 - **Utiliser l'interpréteur python** et sauvegarder un **script**
 
@@ -97,7 +97,7 @@ Ce projet contient plusieurs parties pour guider le travail des participantes et
 ## Une première partie de **guide pour les participantes**, avec plusieurs niveaux de difficulté
 
 
-Cette partie est située dans le dossier **"Guide pour participantes"**. 
+Cette partie est située dans le dossier **"Guide pour participantes"**.
 
 
 Ce dossier contient des **PDF** pour donner des pistes de résolution pour chacun des sous-problèmes, ou présenter des possibilités d'ajouts utiles pour le projet final ("cracker un mot de passe").
@@ -162,7 +162,7 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 - ***Multiplier, permuter, combiner:*** Modifier crackrar de façon **ergonomique** (en utilisant **argparse** et en modifiant le lanceur **crackrar.py**) pour utiliser un mixte de brute-force et d'attaques dictionnaire (exemple: 2 chiffres, 1 caractère spécial, 1 mot en minuscule d'un dictionnaire où on ajouterait une majuscule au début) **- Niveau super-boss**
 
-> 
+>
 > Faire une solution propre est beaucoup plus dur qu'il n'y paraît !
 
 #### [ FIN - Remarques et conclusion ] (facultatif - TOUT PUBLIC) ### A FAIRE
@@ -183,7 +183,7 @@ Cette partie contient là aussi des jupyter notebook et des PDF. Elle est access
 > Ce README fait également partie du support pour les encadrantes !
 
 
-Ce dossier contient essentiellement **un fichier PDF** qui vient en complément de ce README et qui détaille des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, des propositions de concepts à présenter ou de librairies à utiliser, ainsi que **des exemples de code**. 
+Ce dossier contient essentiellement **un fichier PDF** qui vient en complément de ce README et qui détaille des subtilités ou problèmes techniques qui peuvent être rencontrés au cours du projet, des propositions de concepts à présenter ou de librairies à utiliser, ainsi que **des exemples de code**.
 
 >
 > Pour des raisons pédagogiques évidentes il ne faut **surtout pas donner les corrections** aux participantes ! Personne n'apprend à coder en recopiant !
@@ -267,7 +267,7 @@ user@computer:$git checkout master .
 ## Command-line interface (CLI)
 
 
-Les deux programmes ont une interface d'utilisation similaire, à ceci près que **crackrar** prend en argument un fichier **.rar** et la possibilité d'ajuster la verbosité 
+Les deux programmes ont une interface d'utilisation similaire, à ceci près que **crackrar** prend en argument un fichier **.rar** et la possibilité d'ajuster la verbosité
 
 ### brutegen
 
@@ -379,7 +379,7 @@ aah
 ## Remarque sur la performance
 
 
-Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous utilisons du python, mais au fait que **l'ouverture d'un fichier .rar et la vérification de la clé sont lents**. 
+Le cassage de mots de passe est **lent**. Ce n'est pas dû au fait que nous utilisons du python, mais au fait que **l'ouverture d'un fichier .rar et la vérification de la clé sont lents**.
 
 >
 > Il est possible de s'en apporter la preuve avec le programme **tqdm** :
@@ -404,7 +404,7 @@ A quoi cela est-t-il dû ?
 
 
 >
->Le temps de calcul en python est **négligeable** par rapport au temps d'ouverture du fichier .rar / la vérification de la clé. 
+>Le temps de calcul en python est **négligeable** par rapport au temps d'ouverture du fichier .rar / la vérification de la clé.
 
 Lorsque l'on travaille avec **brutegen**, la taille des mots de passe à générer impacte les performances. Si on passe la taille du mot de passe de **n=4** à **n=12**, on **diminue de 50%** les performances. Par contre si on travaille avec **crackrar**, cette perte reste totalement négligeable !
 
@@ -413,165 +413,3 @@ La relative lenteur de python par rapport à d'autres langages réputés plus ra
 
 >
 > On ne peut donc pas tester rapidement les combinaisons sur un fichier .RAR. Les mots de passe sont donc plus durs à trouver: IL faut idéalement utiliser d'autres stratégies que le brute-force (exemple: attaque par dictionnaire)
-
-
-
-## Usage en python du package crackrar
-
-
-A partir du niveau 3, on propose aux participantes d'utiliser des concepts de POO en reprenant les objets du package. Le but ici est de vous donner un aperçu du fonctionnement de ces objets pour que les participantes puissent les utiliser voir les modifier.
-
-
-### Vue d'ensemble
-
-
-Le package est fait de telle sorte qu'on peut soit faire du brute force total (option 1), soit faire des attaques par dictionnaire (option 2), soit combiner différents types d'approches. Pour pouvoir faire du **brute force** ou **enrichir** les **attaques par dictionnaires**, nous utiliserons trois concepts: 
-
-- Le **dictionnaire d'attaque**
-
-- La **mutation**
-
-- La **stratégie d'attaque**
-
-
-### L'objet "dictionnaire d'attaque" (attackDict)
-
-
-L'objet attackDict se crée à partir d'un générateur
-
-Exemple: La fonction suivante est un générateur des lettres de A à Z
-
-```python
-def my_generator_letters():
-    for i in "abcdefghijklmnopqrstuvwxyz":
-        yield i
-```
-
-On peut alors créer un objet "attackDict" à partir de ce générateur
-
-```python
-import crackrar as cr
-
-mydict = cr.attackDict(my_generator_letters)
-```
-
-Ce dictionnaire permettra donc de faire des attaques avec des lettres en minuscules de A à Z
-
-
-### L'objet "mutation"
-
-Si maintenant on voudrait faire des lettres majuscules, on peut soit faire un nouveau générateur comme suit:
-
-```python
-def my_generator_letters():
-    for i in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
-        yield i
-```
-
-Mais on pourrait aussi utiliser l'objet **mutation** !
-
-En effet, on pourrait imaginer une fonction génératrice qui prend une lettre en entrée, et qui renvoie la majuscule correspondante. Par exemple:
-
-```python
-def from_small_to_large_letter(letter):
-    yield letter.lower()
-    yield letter.upper()
-```
-
-Puis utiliser cette fonction génératrice pour faire un objet "mutation"
-
-```
-mutation_small_to_large = cr.mutation(from_small_to_large_letter)
-```
-
-Il sera ainsi facile de combiner les mutations pour transformer nos chaînes d'entrée
-
-Par exemple, si on attaque avec un dictionnaire qui contient le mot "test", on pourra facilement tester les mots de la façon suivante:
-
-- test
-
-- Test
-
-- TeSt
-
-- tEsT
-
-- TEST
-
-Ceci est d'ailleurs l'objet d'une brique à construire.
-
-
-[ Quel est l'intérêt ? ]
-
->
-> **Intérêt**: *L'intérêt de créer ces modifications est que si le propriétaire du mot de passe a légèrement modifé un mot du dictionnaire mais en utilisant des tactiques courantes (exemple: Faire démarrer par une majuscule, utiliser alternativement des majuscules ou minuscules...) alors on pourra quand même trouver son mot de passe, sans ajouter beaucoup de temps de calcul, et de manière très modulaire.*
-
-
-### L'objet "Stratégie" (strategy)
-
-
-L'objet stratégie va nous permettre de choisir comment nous allons planifier et exécuter l'attaque
-
-```python
-# On possède nos fonctions qui permettent de générer des lettres de l'alphabet minuscule
-
-def my_generator_letters(): # L'objet attackDict sera crée à partir de ce générateur
-    for i in "abcdefghijklmnopqrstuvwxyz":
-        yield i
-        
-# ... Et de les transformer en majuscules
-
-def from_small_to_large_letter(letter):
-    yield letter.lower()
-    yield letter.upper()
-```
-
-```python    
-# On importe alors le package
-import crackrar as cr
-
-# On va crée un dictionnaire d'attaque ("attackDict"): il générera les lettres de l'alphabet
-# On crée l'objet attackDict à partir de l'itérateur de la façon suivante:
-my_attack_dict = cr.attackDict(my_generator_letters)
-
-# On va rajouter à notre itérateur la possibilité de faire les majuscules
-my_attack_dict.add_mutation(from_small_to_large_letter) 
-# Désormais, notre dictionnaire d'attaque générera des majuscules ET des minuscules !
-
-# Et à partir de ce dictionnaire d'attaque "muté" on crée une stratégie 
-# Avec cet objet "strategy" on va pouvoir tester toutes les possibilités de combinaisons
-# Dans cet exemple, on testera les possibilités de taille 5 (5 lettres majuscules ou minuscules)
-
-my_strategy = cr.Strategy()
-my_strategy.add_attack_dict(my_attack_dict,fold=5) 
-# "fold" précise le nombre de fois qu'on ajoute l'attackDict
-# "5" signifie donc ici qu'on utilisera 5 fois cet attackDict
-
-# Puis ensuite on attaque un fichier RAR: Le brute force commence !
-my_strategy.launch_attack(rarfile,SHOW_STDOUT=True)
-
-```
-
->
-> L'option "SHOW_STDOUT" de la méthode "launch_attack" permet d'afficher (ou non) les combinaisons essayées sur la sortie standard (l'écran)
-
-
-## Combiner les stratégies
-
-
-Nous avons vu que les objets attackDict (mutés ou non) sont crées à partir d'itérables.
-
-
-Nous avons vu que les stratégies sont crées à partir des objets attackDict
-
-
-L'une des pistes d'amélioration du package que les participantes peuvent coder (NIveau 4 - Challenge) pourrait être de rendre les stratégies itérables en implémentant la fonction __iter__
-
->
-> C'est à dire qu'à partir d'une stratégie, on pourra la combiner avec une autre. On pourra créer de nouveaux dictionnaires à partir de dictionnaires (c'est le principe des mutations). On pourra par exemple, faire une recherche de mot de passe de la façon suivante:  ***"un caractère spécial, une 1 mot du dictionnaire en changeant les majuscules/minuscules, 1 date, trois chiffres"*** etc.
-
->
-> De nombreux tutoriels expliquent comment rendre un objet itérable en ligne. Ex:
-> [ https://www.programiz.com/python-programming/iterator ]
-
-
