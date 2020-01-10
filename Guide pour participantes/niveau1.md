@@ -23,7 +23,13 @@ Nous allons installer un programme: **crackrar** et son jumeau **brutegen**
 
 # Installer un programme/un package avec pip install
 
-**python** est un **programme** qui permet de lire des fichiers (ou ce qui est tapé au clavier) pour ensuite **traduire** nos instructions en langage compréhensible par la machine puis **exécuter les actions demandées**. Il est possible d'y ajouter des **extensions** avec tout un tas de choses déjà codées (souvent en python, mais certaines extensions peuvent aussi être codées en C, en Java, etc). Ces extensions sont appelées des **modules** si ce sont des **scripts** sauvegardés sur l'ordinateur avec une extension *".py"* ou sinon des  **packges** si ils sont **installables**. Le programme que nous allons utiliser ici s'appelle **pip**, et il est livré par défaut avec python.
+**python** est un **programme** qui permet de lire des fichiers (ou ce qui est tapé au clavier) pour ensuite **traduire** nos instructions en langage compréhensible par la machine puis **exécuter les actions demandées**. 
+
+Il est possible d'y ajouter des **extensions** avec tout un tas de choses déjà codées (souvent en python, mais certaines extensions peuvent aussi être codées en C, en Java, etc). 
+
+Ces extensions sont appelées des **modules** si ce sont des **scripts** sauvegardés sur l'ordinateur avec une extension *".py"* ou sinon des  **packges** si ils sont **installables**. 
+
+Pour **installer un package** python on utilise un programme qui s'appelle **pip**, et qui est livré par défaut avec python.
 
 
 > **pip** est un installateur d'extensions pour python
