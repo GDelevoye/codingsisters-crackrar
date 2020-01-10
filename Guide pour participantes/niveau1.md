@@ -32,7 +32,7 @@ Nous allons installer un programme: **crackrar** et son jumeau **brutegen**
 pip, comme de nombreux programmes, s'utilise en **ligne de commande**. C'est-à-dire que pour l'utiliser vous devez utiliser sous Linux **CTRL+ALT+T"**, et ensuite **taper son nom** et appuyer sur **entrée**
 
 
-```bash
+```console
 delevoye@gmcpc04:/export/home1/users/gmc/delevoye$ pip
 
 Usage:   
