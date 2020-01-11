@@ -119,15 +119,21 @@ Les étapes sont classées par difficulté de niveau 1 à 4. Il est possible de 
 
 #### [ Niveau 1 - Ligne de commande, boucles, lecture de fichier ]
 
-- Installer un programme/un package avec **pip install** **- NIVEAU 1**
+  - Installer un programme/un package avec pip install - NIVEAU 1
 
-- Utiliser **crackrar** pour cracker un mot de passe en ligne de commande **- NIVEAU1**
+  - Utiliser brutegen pour générer des combinaisons - NIVEAU 1
 
-- **Tester un mot de passe** .rar en python **- NIVEAU 1**
+  - Utiliser crackrar pour cracker un mot de passe en ligne de commande - NIVEAU1
 
-- Tester tous les **nombres** possibles **- NIVEAU 1**
+  - Estimer le temps nécessaire pour cracker un mot de passe - NIVEAU 1
 
-- Tester tous les mots de passe stockés dans un fichier (attaque par dictionnaire) **- NIVEAU 1**
+  - Réfléchir à des alternatives à l'attaque par force brute- NIVEAU 1
+
+  - Tester un mot de passe .rar en python - NIVEAU 1
+
+  - Tester tous les nombres possibles - NIVEAU 1
+
+  - Tester tous les mots de passe stockés dans un fichier (attaque par dictionnaire) - NIVEAU 1
 
 
 #### [ Niveau 2 - Créer des itérateurs particuliers ]
