@@ -13,6 +13,7 @@ setup(
 "tqdm",
 "more-itertools"
 ],
+   python_requires='>=3',
 
     # la version du code
     version='1.0',
