@@ -32,7 +32,7 @@ def essayer_mdp(chemin_vers_fichier_RAR, mdp, nom_fichier=None):
         fichier = nom_fichier
 
     try:
-        txt = fichierRar.open(fichier,mdp).read().decode().strip()
+        txt = fichierRar.open(fichier,psw=mdp).read().decode().strip()
         #txt_list[fichier] = txt
     except BadRarFile:
         to_return = False
