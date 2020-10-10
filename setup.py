@@ -9,7 +9,7 @@ except ImportError:  # for pip <= 9.0.3
 setup(
 
     name='crackrar',
-    install_requires=["rarfile",
+    install_requires=["rarfile==3.0",
 "tqdm",
 "more-itertools"
 ],
