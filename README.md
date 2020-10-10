@@ -238,12 +238,18 @@ Cela permet de générer des mots qui pourront "sonner français" sans pour auta
 
 # Installation du package crackrar
 
-
 ```bash
 git clone https://github.com/GDelevoye/codingsisters-crackrar.git
 mv ./codingsisters-crackrar crackrar
-pip install ./crackrar
+cd crackrar
+python3 setup.py develop --user
 ```
+
+/!\ ATTENTION /!\
+Pour des raisons encore mal comprises, les versions de RarFile (que crackrar utilise), le code peut ne pas marcher
+Le code actuel fonctionne en rarFile 3.0 uniquement
+Normalement j'ai paramétré l'installateur pour installer rarFile 3.0 mais il semble que ça ne marche pas toujours
+Pas de solution sauf installation manuelle de rarFile 3.0
 
 Et voila !
 
